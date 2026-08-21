@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F7FA"/>
+      <stop offset="100%" stop-color="#e8eef5"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f7fafc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#0E8F62" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#0E8F62" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#glow)"/>
+  <g fill="none" stroke="#0D2B52" stroke-opacity="0.07">
+    <circle cx="1000" cy="120" r="220"/>
+    <circle cx="1000" cy="120" r="150"/>
+    <circle cx="100" cy="800" r="260"/>
+    <circle cx="100" cy="800" r="170"/>
+  </g>
+
+  <!-- Main card -->
+  <rect x="180" y="120" width="700" height="640" rx="32" fill="url(#card)" stroke="#0D2B52" stroke-opacity="0.06"/>
+  <rect x="180" y="120" width="700" height="640" rx="32" fill="url(#card)" stroke="none"/>
+
+  <!-- Roof illustration -->
+  <path d="M270 420 L470 230 L670 420" fill="none" stroke="#0D2B52" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M470 230 L470 140" stroke="#0D2B52" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="470" cy="118" r="16" fill="#C6A55A"/>
+  <rect x="380" y="420" width="180" height="130" rx="8" fill="#0E8F62" fill-opacity="0.12"/>
+  <rect x="410" y="455" width="120" height="95" rx="6" fill="#0D2B52" fill-opacity="0.08"/>
+  <path d="M310 640 L310 520 L230 520 L230 640" fill="#0D2B52" fill-opacity="0.05"/>
+  <path d="M710 640 L710 520 L630 520 L630 640" fill="#0D2B52" fill-opacity="0.05"/>
+  <rect x="180" y="120" width="700" height="640" rx="32" fill="none" stroke="#ffffff" stroke-opacity="0.6"/>
+
+  <!-- Floating stat chip -->
+  <g transform="translate(60 640)">
+    <rect x="0" y="0" width="240" height="110" rx="20" fill="#0D2B52"/>
+    <circle cx="40" cy="42" r="6" fill="#0E8F62"/>
+    <circle cx="40" cy="42" r="12" fill="#0E8F62" fill-opacity="0.25"/>
+    <text x="70" y="48" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold">98% On-Time</text>
+    <text x="70" y="80" fill="#ffffff" fill-opacity="0.55" font-family="Arial" font-size="15">Service completion rate</text>
+  </g>
+
+  <!-- Floating chip 2 -->
+  <g transform="translate(880 120)">
+    <rect x="0" y="0" width="220" height="96" rx="20" fill="#ffffff" stroke="#0D2B52" stroke-opacity="0.08"/>
+    <rect x="22" y="24" width="48" height="48" rx="12" fill="#0E8F62" fill-opacity="0.12"/>
+    <path d="M40 52 L48 60 L64 44" stroke="#0E8F62" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+    <text x="88" y="48" fill="#0D2B52" font-family="Arial" font-size="19" font-weight="bold">Verified Partners</text>
+    <text x="88" y="72" fill="#1D1D1F" fill-opacity="0.55" font-family="Arial" font-size="14">Police background checked</text>
+  </g>
+</svg>
