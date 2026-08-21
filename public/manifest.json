@@ -1,0 +1,26 @@
+{
+  "name": "Brancho — Home, Perfectly Taken Care Of",
+  "short_name": "Brancho",
+  "description": "India's trusted home services platform connecting homeowners with background-verified professionals.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#181A1F",
+  "theme_color": "#181A1F",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ]
+}
