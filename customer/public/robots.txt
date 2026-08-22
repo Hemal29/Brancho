@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://brancho.in/sitemap.xml

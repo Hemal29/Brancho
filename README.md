@@ -3,13 +3,7 @@
 Brancho connects homeowners with background-verified professionals for home services
 (AC repair, deep cleaning, electrician, plumbing and more) across India.
 
-This repository contains the full platform: a corporate marketing website, a customer
-booking dashboard, a provider (professional) dashboard, an admin panel, and a REST API
-backed by MySQL.
-
-## Project Structure
-
-The platform is being split into three independent apps:
+The platform is divided into **three independent apps**:
 
 | App | Path | Port | Description |
 | --- | ---- | ---- | ----------- |
@@ -17,8 +11,8 @@ The platform is being split into three independent apps:
 | **Admin Panel** | `admin/` | 3001 | Admin dashboard: users, bookings, services, professionals, coupons, reviews, support |
 | **Customer App** | `customer/` | 3000 | Corporate site + customer dashboard + provider dashboard |
 
-> During migration, the original monolithic app at the repository root still contains
-> all three areas together and is fully functional.
+Both frontends proxy `/api/*` requests to the backend (`next.config.ts` rewrites), so
+authentication cookies keep working unchanged — just make sure the backend is running.
 
 ## Features
 
@@ -27,7 +21,7 @@ The platform is being split into three independent apps:
 - Provider flow: incoming jobs, status updates, earnings dashboard
 - Admin panel: full CRUD over users, services, professionals, coupons, reviews, tickets
 - JWT authentication with role-based access (customer / provider / admin)
-- MySQL schema with 13 tables + seed data (`db/init.sql`, `scripts/seed.mjs`)
+- MySQL schema with 13 tables + seed data (`backend/db/init.sql`, `backend/scripts/seed.mjs`)
 
 ## Tech Stack
 
@@ -36,16 +30,25 @@ The platform is being split into three independent apps:
 - **MySQL 8** via `mysql2` connection pool
 - **JWT** auth (`jsonwebtoken`) + bcrypt password hashing
 
-## Getting Started (monolith)
+## Getting Started
 
 ```bash
-npm install
-cp .env.example .env.local   # then fill in DB credentials
-npm run db:seed              # create tables + demo data
-npm run dev                  # http://localhost:3000
+# 1. Install dependencies for all three apps
+npm run install:all
+
+# 2. Configure the backend environment
+cp backend/.env.local   # fill in DB credentials + JWT secret
+
+# 3. Create tables + demo data (requires MySQL running)
+npm run db:seed
+
+# 4. Run each app (in separate terminals)
+npm run dev:backend     # http://localhost:4000  (start this first)
+npm run dev:customer    # http://localhost:3000
+npm run dev:admin       # http://localhost:3001
 ```
 
-### Environment variables (`.env.local`)
+### Environment variables (`backend/.env.local`)
 
 ```
 DB_HOST=localhost
@@ -55,8 +58,14 @@ DB_PASSWORD="your-password"
 DB_NAME=brancho
 JWT_SECRET=your-secret
 JWT_EXPIRE=7d
-NEXT_PUBLIC_API_URL=http://localhost:4000   # admin/customer apps -> backend
 ```
+
+### Frontend configuration (optional)
+
+| Variable | Where | Default | Purpose |
+| -------- | ----- | ------- | ------- |
+| `API_PROXY_URL` | `customer/`, `admin/` | `http://localhost:4000` | Where `/api/*` requests are proxied |
+| `NEXT_PUBLIC_SITE_URL` | `admin/` | `http://localhost:3000` | "View website" links in the admin panel |
 
 ## Demo Accounts (after seeding)
 
@@ -68,9 +77,9 @@ NEXT_PUBLIC_API_URL=http://localhost:4000   # admin/customer apps -> backend
 
 ## Database
 
-Schema lives in [`db/init.sql`](db/init.sql) (13 tables: Users, Professionals,
-Services, Bookings, Payments, Reviews, Wallets, WalletTransactions, Coupons,
-Notifications, SupportTickets, Addresses, ActivityLogs).
+Schema lives in [`backend/db/init.sql`](backend/db/init.sql) (13 tables: Users,
+Professionals, Services, Bookings, Payments, Reviews, Wallets, WalletTransactions,
+Coupons, Notifications, SupportTickets, Addresses, ActivityLogs).
 
 Seed demo data:
 

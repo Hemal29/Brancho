@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#5B5BC0"/>
+      <stop offset="100%" stop-color="#43439a"/>
+    </linearGradient>
+    <linearGradient id="gl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <rect width="800" height="500" fill="url(#gl)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.14">
+    <circle cx="660" cy="90" r="150"/>
+    <circle cx="660" cy="90" r="100"/>
+    <circle cx="140" cy="430" r="180"/>
+    <circle cx="140" cy="430" r="120"/>
+  </g>
+  <g transform="translate(400 210)">
+    <path d="M0 95 L0 40 L-105 40 L-105 -12 L0 -12 L0 -68 L155 -68 L155 -12 L260 -12 L260 40 L155 40 L155 95 Z" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.25" stroke-width="3"/>
+    <path d="M-140 26 L10 -95 L160 26" fill="none" stroke="#ffffff" stroke-width="9" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
+    <rect x="-40" y="42" width="108" height="53" rx="4" fill="#ffffff" fill-opacity="0.15"/>
+  </g>
+  <text x="400" y="430" text-anchor="middle" fill="#ffffff" font-family="Manrope, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="2">Appliance Repair</text>
+  <text x="400" y="462" text-anchor="middle" fill="#ffffff" fill-opacity="0.6" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="6">BRANCHO SERVICE</text>
+</svg>
