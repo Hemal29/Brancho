@@ -70,7 +70,7 @@ export default function SupportPage() {
               <div className="mb-2 flex flex-wrap items-center gap-2">
                 <p className="font-semibold text-ink">{t.subject}</p>
                 <Badge status={t.status} />
-                <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-semibold capitalize text-gray-600">{t.priority}</span>
+                <span className="rounded-full bg-gray-100 px-2 py-0.5 text-[10px] font-semibold capitalize text-gray-600 dark:bg-white/10 dark:text-muted">{t.priority}</span>
               </div>
               <p className="text-sm text-muted">{t.message}</p>
               <p className="mt-2 text-xs text-muted">Ticket #{t.id} · {formatDateTime(t.createdAt)}</p>

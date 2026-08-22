@@ -49,8 +49,8 @@ export default function BrandGuidelinesPage() {
             >
               <div className="dot-grid-light absolute inset-0 opacity-25" />
               <div className="relative flex items-center gap-3">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/10">
-                  <Image src="/brancho-logo-white.png" alt="Brancho logo" width={44} height={44} className="object-contain" />
+                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-lg">
+                  <Image src="/brancho-logo.png" alt="Brancho logo" width={44} height={44} className="object-contain" />
                 </span>
                 <div>
                   <p className="font-heading text-xl font-bold">Brancho</p>
@@ -99,7 +99,7 @@ export default function BrandGuidelinesPage() {
               >
                 <span className="h-12 w-12 shrink-0 rounded-xl border border-line" style={{ backgroundColor: c.hex }} />
                 <div>
-                  <p className="font-heading text-sm font-semibold text-navy">{c.name}</p>
+                  <p className="font-heading text-sm font-semibold text-ink">{c.name}</p>
                   <p className="text-xs text-muted">{c.hex}</p>
                 </div>
               </motion.div>
@@ -134,7 +134,7 @@ export default function BrandGuidelinesPage() {
                     {t.weights}
                   </span>
                 </div>
-                <p className="mt-8 text-5xl font-bold text-navy" style={{ fontFamily: t.name.toLowerCase() === "manrope" ? "var(--font-heading)" : "var(--font-body)" }}>
+                <p className="mt-8 text-5xl font-bold text-ink" style={{ fontFamily: t.name.toLowerCase() === "manrope" ? "var(--font-heading)" : "var(--font-body)" }}>
                   {t.name} Aa
                 </p>
                 <p className="mt-6 text-lg text-ink">{t.role}</p>
@@ -172,7 +172,7 @@ export default function BrandGuidelinesPage() {
                     <s.icon size={20} />
                   </span>
                   <div>
-                    <h3 className="font-heading text-lg font-semibold text-navy">{s.title}</h3>
+                    <h3 className="font-heading text-lg font-semibold text-ink">{s.title}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted">{s.text}</p>
                   </div>
                 </motion.div>

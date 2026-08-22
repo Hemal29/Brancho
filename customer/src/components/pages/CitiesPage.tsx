@@ -13,18 +13,18 @@ export default function CitiesPage() {
       <PageHero
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Cities", href: "/cities" }]}
         eyebrow="Cities"
-        title="Serving 25+ cities. Building toward all of India."
-        description="Brancho began in Ahmedabad and now operates across Gujarat with a clear national roadmap. Every city opens to the same promise — verified professionals and guaranteed service."
+        title="Serving Veraval, Rajkot and Junagadh. Building toward all of India."
+        description="Brancho began in Junagadh and now operates across the Saurashtra region with a clear national roadmap. Every city opens to the same promise — verified professionals and guaranteed service."
       >
         <div className="flex flex-wrap gap-6">
           {[
-            { v: "6", l: "Anchor cities" },
-            { v: "25+", l: "Cities live today" },
-            { v: "8", l: "Launching next" },
+            { v: "3", l: "Cities live today" },
+            { v: "Junagadh", l: "Headquarters" },
+            { v: "2021", l: "Latest city — Veraval" },
             { v: "4.9★", l: "City-wide rating" },
           ].map((s) => (
             <div key={s.l}>
-              <p className="font-heading text-3xl font-bold text-navy">{s.v}</p>
+              <p className="font-heading text-3xl font-bold text-ink">{s.v}</p>
               <p className="mt-1 text-xs font-medium uppercase tracking-widest text-muted">{s.l}</p>
             </div>
           ))}
@@ -100,7 +100,7 @@ export default function CitiesPage() {
 
           {/* Live city list */}
           <div>
-            <h2 className="font-heading text-2xl font-semibold text-navy">Live now</h2>
+            <h2 className="font-heading text-2xl font-semibold text-ink">Live now</h2>
             <p className="mt-2 text-sm text-muted">
               Six anchor cities running at full capacity — with the same quality standards everywhere.
             </p>
@@ -112,9 +112,9 @@ export default function CitiesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.06, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                  className="group flex items-center justify-between rounded-2xl border border-line bg-surface-soft px-6 py-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:bg-white hover:shadow-xl hover:shadow-navy/10"
+                  className="group flex items-center justify-between rounded-2xl border border-line bg-surface-soft px-6 py-5 transition-all hover:-translate-y-0.5 hover:border-transparent hover:bg-surface hover:shadow-xl hover:shadow-navy/10"
                 >
-                  <span className="flex items-center gap-3 font-heading font-semibold text-navy">
+                  <span className="flex items-center gap-3 font-heading font-semibold text-ink">
                     <MapPin size={17} className="text-accent" />
                     {city.name}
                   </span>

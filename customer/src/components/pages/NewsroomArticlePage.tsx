@@ -55,7 +55,7 @@ export default function NewsroomArticlePage({ post }: { post: Post }) {
 
             <div className="mt-12 border-l-2 border-accent pl-6">
               <p className="text-sm text-muted">
-                <span className="font-semibold text-navy">About Brancho</span> — Brancho is an
+                <span className="font-semibold text-ink">About Brancho</span> — Brancho is an
                 Indian technology platform transforming home services through trust, transparency
                 and skilled professionals. Follow our newsroom for company announcements, product
                 launches and the stories behind our services.
@@ -65,14 +65,14 @@ export default function NewsroomArticlePage({ post }: { post: Post }) {
             <div className="mt-12 flex flex-col justify-between gap-6 border-t border-line pt-8 sm:flex-row sm:items-center">
               <Link
                 href="/newsroom"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition-colors hover:text-accent-deep"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-accent-deep"
               >
                 <ArrowLeft size={16} />
                 All news
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition-colors hover:text-accent-deep"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-accent-deep"
               >
                 Press enquiries
                 <ArrowRight size={16} />

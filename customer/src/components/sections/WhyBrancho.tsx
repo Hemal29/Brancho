@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Check, X, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { WHY_BRANCHO_BENEFITS } from "@/lib/data";
@@ -104,12 +105,12 @@ export default function WhyBrancho() {
             Brancho is accountable for every visit. Every professional carries a
             rating, and every job is protected by our service guarantee.
           </p>
-          <a
+          <Link
             href="/services"
             className="inline-flex shrink-0 items-center gap-1.5 font-semibold text-accent-deep transition-colors hover:text-accent"
           >
             Book a service <ChevronRight size={16} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>

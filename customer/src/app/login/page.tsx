@@ -8,6 +8,8 @@ import { ArrowLeft, Loader2 } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
 import { cn } from "@/lib/utils";
 
+const ADMIN_URL = process.env.NEXT_PUBLIC_ADMIN_URL || "http://localhost:3001";
+
 function LoginPageInner() {
   const { login, register } = useAuth();
   const router = useRouter();
@@ -21,10 +23,14 @@ function LoginPageInner() {
   const [busy, setBusy] = useState(false);
 
   const go = (r: string) => {
+    if (r === "admin") {
+      window.location.href = `${ADMIN_URL}/admin`;
+      return;
+    }
     if (redirect && redirect === r) {
       router.replace(`/${r}`);
     } else {
-      router.replace(r === "admin" ? "/admin" : r === "provider" ? "/provider" : "/customer");
+      router.replace(r === "provider" ? "/provider" : "/customer");
     }
   };
 
@@ -68,7 +74,7 @@ function LoginPageInner() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="rounded-3xl border border-white/10 bg-white p-7 text-ink shadow-2xl sm:p-9"
+          className="rounded-3xl border border-line bg-surface p-7 text-ink shadow-2xl sm:p-9"
         >
           <div className="mb-6 flex items-center gap-3">
             <img src="/brancho-logo.png" alt="" className="h-11 w-11 rounded-xl object-contain" />
@@ -80,7 +86,7 @@ function LoginPageInner() {
             </div>
           </div>
 
-          <div className="mb-6 grid grid-cols-2 gap-1 rounded-full bg-secondary p-1">
+          <div className="mb-6 grid grid-cols-2 gap-1 rounded-full bg-surface-soft p-1">
             {(["login", "register"] as const).map((m) => (
               <button
                 key={m}
@@ -99,7 +105,7 @@ function LoginPageInner() {
           </div>
 
           {mode === "register" && (
-            <div className="mb-4 grid grid-cols-2 gap-1 rounded-full bg-secondary p-1">
+            <div className="mb-4 grid grid-cols-2 gap-1 rounded-full bg-surface-soft p-1">
               {(["customer", "provider"] as const).map((r) => (
                 <button
                   key={r}
@@ -160,13 +166,13 @@ function LoginPageInner() {
             </Field>
 
             {error && (
-              <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p>
+              <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 dark:bg-rose-500/10 dark:text-rose-300">{error}</p>
             )}
 
             <button
               type="submit"
               disabled={busy}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-sm font-semibold text-white transition-all hover:bg-navy-soft disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-sm font-semibold text-white transition-all hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110 disabled:opacity-60"
             >
               {busy && <Loader2 size={16} className="animate-spin" />}
               {mode === "login" ? "Login" : "Create account"}
@@ -175,9 +181,9 @@ function LoginPageInner() {
 
           <p className="mt-5 text-center text-xs text-muted">
             Admin? Use{" "}
-            <Link href="/admin/login" className="font-semibold text-accent-deep hover:text-accent">
+            <a href={`${ADMIN_URL}/admin/login`} className="font-semibold text-accent-deep hover:text-accent">
               admin login
-            </Link>
+            </a>
           </p>
         </motion.div>
       </div>

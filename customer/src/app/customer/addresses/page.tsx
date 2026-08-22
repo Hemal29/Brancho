@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Loader2, MapPin, Plus, Trash2 } from "lucide-react";
 import { api } from "@/lib/client";
+import { CITIES } from "@/lib/data";
 import { PageHeader, Badge } from "@/components/app/StatCard";
 
 type Address = { id: number; label: string; addressLine: string; city: string; state: string; zipCode: string; isDefault: number };
@@ -11,7 +12,7 @@ export default function AddressesPage() {
   const [addresses, setAddresses] = useState<Address[]>([]);
   const [loading, setLoading] = useState(true);
   const [adding, setAdding] = useState(false);
-  const [form, setForm] = useState({ label: "Home", addressLine: "", city: "Ahmedabad", state: "Gujarat", zipCode: "", isDefault: false });
+  const [form, setForm] = useState({ label: "Home", addressLine: "", city: "Veraval", state: "Gujarat", zipCode: "", isDefault: false });
   const [busy, setBusy] = useState(false);
 
   const load = async () => {
@@ -30,7 +31,7 @@ export default function AddressesPage() {
     setBusy(false);
     if (res.ok) {
       setAdding(false);
-      setForm({ label: "Home", addressLine: "", city: "Ahmedabad", state: "Gujarat", zipCode: "", isDefault: false });
+      setForm({ label: "Home", addressLine: "", city: "Veraval", state: "Gujarat", zipCode: "", isDefault: false });
       load();
     } else alert(res.message);
   };
@@ -69,7 +70,11 @@ export default function AddressesPage() {
           </label>
           <label className="block">
             <span className="mb-1.5 block text-xs font-semibold text-muted">City</span>
-            <input required value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} className="input" />
+            <select required value={form.city} onChange={(e) => setForm({ ...form, city: e.target.value })} className="input">
+              {CITIES.map((c) => (
+                <option key={c.name} value={c.name}>{c.name}</option>
+              ))}
+            </select>
           </label>
           <label className="block">
             <span className="mb-1.5 block text-xs font-semibold text-muted">PIN code</span>

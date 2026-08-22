@@ -18,7 +18,7 @@ export default function FuturePage() {
         title="Where Brancho is going next."
         description="From our foundation and innovation lab to global expansion — this is the roadmap for the next decade of home care."
       >
-        <div className="inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white px-5 py-2.5 text-sm font-semibold text-navy">
+        <div className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink">
           <Rocket size={15} className="text-accent-deep" />
           Live now · innovation in progress · ambitious by design
         </div>
@@ -50,7 +50,7 @@ export default function FuturePage() {
                     </span>
                     <ArrowUpRight size={20} className="text-muted transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent" />
                   </div>
-                  <h2 className="mt-6 font-heading text-xl font-semibold text-navy">{f.name}</h2>
+                  <h2 className="mt-6 font-heading text-xl font-semibold text-ink">{f.name}</h2>
                   <p className="mt-1.5 text-sm font-medium text-accent-deep">{f.tagline}</p>
                   <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{f.description}</p>
                 </Link>

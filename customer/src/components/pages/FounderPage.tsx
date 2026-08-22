@@ -104,7 +104,7 @@ export default function FounderPage() {
                 className="rounded-3xl border border-line bg-surface p-8"
               >
                 <span className="font-heading text-3xl font-bold text-gold">0{i + 1}</span>
-                <p className="mt-4 font-heading text-base font-semibold text-navy">{p}</p>
+                <p className="mt-4 font-heading text-base font-semibold text-ink">{p}</p>
               </motion.div>
             ))}
           </div>
@@ -121,7 +121,7 @@ export default function FounderPage() {
             className="mx-auto flex max-w-4xl flex-col items-start justify-between gap-6 rounded-3xl border border-line bg-surface-soft p-10 sm:flex-row sm:items-center"
           >
             <div>
-              <h2 className="font-heading text-2xl font-semibold text-navy">Hear it from the team</h2>
+              <h2 className="font-heading text-2xl font-semibold text-ink">Hear it from the team</h2>
               <p className="mt-2 text-sm text-muted">Read the stories of the people building Brancho.</p>
             </div>
             <Link

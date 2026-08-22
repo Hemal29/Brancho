@@ -4,15 +4,15 @@ export const CORPORATE = {
   tagline: "Home, Perfectly Taken Care Of.",
   domain: "brancho.in",
   founded: 2019,
-  headquarters: "Corporate House, Sindhu Bhavan Road, Bodakdev, Ahmedabad, Gujarat 380054",
+  headquarters: "Brancho House, MG Road, Junagadh, Gujarat 362001",
   ctaEmail: "care@brancho.in",
 };
 
 export const CONTACT = {
   corporate: {
     label: "Corporate Office",
-    value: "Corporate House, Sindhu Bhavan Road, Bodakdev, Ahmedabad, Gujarat 380054",
-    mapsUrl: "https://www.google.com/maps?q=Bodakdev,+Ahmedabad,+Gujarat",
+    value: "Brancho House, MG Road, Junagadh, Gujarat 362001",
+    mapsUrl: "https://www.google.com/maps?q=MG+Road,+Junagadh,+Gujarat",
   },
   support: { label: "Customer Support", email: "support@brancho.in", phone: "+91 1800 123 4567" },
   business: { label: "Business Enquiries", email: "business@brancho.in", phone: "+91 79 4000 5000" },
@@ -225,7 +225,7 @@ export const NEWSROOM = [
     date: "July 2026",
     readTime: "4 min",
     body: [
-      "Brancho today announced it has crossed 100,000 customers served across Gujarat — a milestone reached seven years after a single van rolled out of Ahmedabad with three professionals and a promise of trust.",
+      "Brancho today announced it has crossed 100,000 customers served across Gujarat — a milestone reached seven years after a single van rolled out of Junagadh with three professionals and a promise of trust.",
       "The company credits the achievement to its multi-point verification protocol, transparent pricing and a technology platform that has made home services predictable.",
       "Brancho plans to build on this momentum with its national expansion roadmap beginning Q1 2027.",
     ],
@@ -347,7 +347,7 @@ export const FUTURE_DETAILS: FutureDetail[] = [
       { value: "3", label: "Skilling centres" },
     ],
     milestones: [
-      { phase: "2026", title: "Foundation launch", description: "Independent registration and the first two skilling centres in Ahmedabad and Surat." },
+      { phase: "2026", title: "Foundation launch", description: "Independent registration and the first two skilling centres in Junagadh and Veraval." },
       { phase: "2027", title: "Statewide reach", description: "Ten centres across Gujarat and the first national professional-wellbeing programme." },
       { phase: "2028", title: "National model", description: "A replicable skilling-to-livelihood model extended to every live Brancho city." },
     ],
@@ -555,8 +555,8 @@ export const BRAND = {
 };
 
 export const TIMELINE = [
-  { year: "2019", title: "Founded in Ahmedabad", description: "Brancho begins with one van, three professionals and a promise of trust." },
-  { year: "2021", title: "Gujarat-wide expansion", description: "5,000+ professionals and 25+ cities join the Brancho network." },
+  { year: "2019", title: "Founded in Junagadh", description: "Brancho begins with one van, three professionals and a promise of trust." },
+  { year: "2021", title: "Gujarat expansion", description: "Brancho grows across Saurashtra, reaching Rajkot and Veraval." },
   { year: "2023", title: "Technology platform", description: "AI allocation, live tracking and digital-first operations go live." },
   { year: "2024", title: "Businesses portfolio", description: "Brancho Water, Home Care and Urgent Care become independent businesses." },
   { year: "2025", title: "Family & student services", description: "MyFamNest and Brancho Students extend care beyond the walls of the home." },
@@ -580,7 +580,7 @@ export const FOUNDER = {
   name: "Rohan Trivedi",
   role: "Founder & Chief Executive Officer",
   intro:
-    "Rohan founded Brancho in 2019 after watching his parents struggle to find a trustworthy plumber in Ahmedabad. A former infrastructure engineer, he built the company on a simple conviction: Indian homes deserve the same reliability and dignity as any other consumer service.",
+    "Rohan founded Brancho in 2019 after watching his parents struggle to find a trustworthy plumber in Junagadh. A former infrastructure engineer, he built the company on a simple conviction: Indian homes deserve the same reliability and dignity as any other consumer service.",
   story: [
     "It began as a weekend problem — a leaking bathroom and a string of unavailable, unverified repairmen. Rohan and his co-founders rented a single van, hired three professionals, and personally accompanied the first hundred visits to learn what trust really meant.",
     "The insight that shaped Brancho: customers weren't looking for a technician, they were looking for certainty. So Brancho built verification, transparent pricing and a quality guarantee into the core of the product.",
@@ -608,12 +608,9 @@ export const LEGAL_FAQ_LINKS = [
 ];
 
 export const BRANCHES = [
-  { city: "Ahmedabad", status: "HQ", since: "2019" },
+  { city: "Junagadh", status: "HQ", since: "2019" },
   { city: "Rajkot", status: "Live", since: "2020" },
-  { city: "Junagadh", status: "Live", since: "2021" },
-  { city: "Surat", status: "Live", since: "2021" },
-  { city: "Vadodara", status: "Live", since: "2022" },
-  { city: "Gandhinagar", status: "Live", since: "2022" },
+  { city: "Veraval", status: "Live", since: "2021" },
 ];
 
 export const SEARCHABLE_PAGES = [
@@ -688,7 +685,7 @@ export const PRESS = [
   },
   {
     outlet: "Gujarat Samachar",
-    title: "Ahmedabad's Brancho expands urgent home care to all Gujarat cities",
+    title: "Junagadh-born Brancho expands urgent home care across Gujarat",
     date: "March 2026",
     type: "News",
   },
@@ -709,7 +706,7 @@ export const PRESS = [
 export const FAQS_EXTRA = [
   { q: "How are Brancho professionals verified?", a: "Every professional passes identity verification, police background checks, address confirmation, a skill assessment and in-person training before joining. Verification is refreshed periodically." },
   { q: "What does Brancho charge?", a: "Pricing is upfront and transparent. You see the exact cost before confirming, based on service, location and job size. No hidden charges." },
-  { q: "Which cities are you live in?", a: "Ahmedabad, Rajkot, Junagadh, Surat, Vadodara and Gandhinagar today, with more cities on our roadmap." },
+  { q: "Which cities are you live in?", a: "Veraval, Rajkot and Junagadh today, with more cities on our roadmap." },
   { q: "How do I become a service partner?", a: "Download the Brancho Partner app, complete your profile and pass our verification and skill assessment. Once approved, you get training, a uniform and weekly payouts." },
   { q: "Is there a warranty on services?", a: "Selected services carry a workmanship warranty of up to 90 days. If the same issue recurs, we fix it free." },
   { q: "What if I'm not satisfied?", a: "We'll send a professional back at no cost, or issue a refund — whichever you prefer." },

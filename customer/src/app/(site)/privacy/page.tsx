@@ -68,7 +68,7 @@ const SECTIONS = [
     id: "contact",
     title: "Contact Us",
     body: [
-      "For any privacy-related questions, requests or concerns, contact our Data Protection team at support@brancho.in or write to our registered office in Ahmedabad, Gujarat, India.",
+      "For any privacy-related questions, requests or concerns, contact our Data Protection team at support@brancho.in or write to our registered office in Junagadh, Gujarat, India.",
       "We aim to respond to all privacy requests within 15 working days.",
     ],
   },

@@ -19,7 +19,7 @@ export default function Contact() {
       icon: MapPin,
       title: "Corporate Office",
       lines: [CONTACT.address],
-      href: "https://maps.google.com/?q=Bodakdev,Ahmedabad",
+      href: "https://maps.google.com/?q=Somnath+Road,Veraval",
     },
     {
       icon: Phone,
@@ -83,7 +83,7 @@ export default function Contact() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                      className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                     />
                   </div>
                   <div>
@@ -96,7 +96,7 @@ export default function Contact() {
                       type="tel"
                       required
                       placeholder="+91 98765 43210"
-                      className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                      className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                     />
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export default function Contact() {
                     name="service"
                     required
                     defaultValue=""
-                    className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                    className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                   >
                     <option value="" disabled>
                       Select a service
@@ -136,13 +136,13 @@ export default function Contact() {
                     name="message"
                     rows={4}
                     placeholder="Tell us about your requirement..."
-                    className="w-full resize-none rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                    className="w-full resize-none rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full rounded-full bg-navy py-4 text-sm font-semibold text-white transition-all hover:bg-navy-soft hover:shadow-xl hover:shadow-navy/20"
+                  className="w-full rounded-full bg-navy py-4 text-sm font-semibold text-white transition-all hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110 hover:shadow-xl hover:shadow-navy/20"
                 >
                   Book a Service
                 </button>
@@ -168,7 +168,7 @@ export default function Contact() {
                   href={card.href}
                   target={card.title === "Corporate Office" ? "_blank" : undefined}
                   rel="noopener noreferrer"
-                  className="group rounded-2xl border border-line bg-surface-soft p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-white hover:shadow-xl hover:shadow-navy/10"
+                  className="group rounded-2xl border border-line bg-surface-soft p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-surface hover:shadow-xl hover:shadow-navy/10"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold transition-colors group-hover:bg-accent group-hover:text-white">
                     <card.icon size={20} />
@@ -185,8 +185,8 @@ export default function Contact() {
 
             <div className="relative flex-1 overflow-hidden rounded-3xl border border-line">
               <iframe
-                title="Brancho Corporate Office — Bodakdev, Ahmedabad"
-                src="https://maps.google.com/maps?q=Bodakdev%2C%20Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                title="Brancho Office — Somnath Road, Veraval"
+                src="https://maps.google.com/maps?q=Veraval%2C%20Gujarat&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="h-72 w-full grayscale-[35%] transition-all duration-500 hover:grayscale-0 lg:h-full lg:min-h-[280px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

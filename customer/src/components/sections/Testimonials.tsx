@@ -16,7 +16,7 @@ export default function Testimonials() {
           description="Real stories from the million-plus families and professionals who make Brancho what it is."
         />
 
-        <div className="columns-1 gap-6 md:columns-2 lg:columns-3">
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
           {TESTIMONIALS.map((t, i) => (
             <motion.figure
               key={t.name}
@@ -24,7 +24,7 @@ export default function Testimonials() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: (i % 3) * 0.1 }}
-              className="group mb-6 break-inside-avoid rounded-3xl border border-line bg-surface-soft p-8 transition-all duration-500 hover:-translate-y-1 hover:border-transparent hover:bg-white hover:shadow-2xl hover:shadow-navy/10"
+              className="group flex h-full flex-col rounded-3xl border border-line bg-surface-soft p-7 transition-all duration-500 hover:-translate-y-1 hover:border-transparent hover:bg-surface hover:shadow-2xl hover:shadow-navy/10"
             >
               <div className="flex items-center justify-between">
                 <div className="flex gap-1">
@@ -32,17 +32,17 @@ export default function Testimonials() {
                     <Star key={r} size={16} className="fill-gold text-gold" />
                   ))}
                 </div>
-                <Quote size={28} className="text-navy/10 transition-colors group-hover:text-accent/20" />
+                <Quote size={28} className="text-ink/10 transition-colors group-hover:text-accent/20" />
               </div>
 
-              <blockquote className="mt-5 text-[15px] leading-relaxed text-ink/85">
+              <blockquote className="mt-5 flex-1 text-[15px] leading-relaxed text-ink/85">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
 
-              <figcaption className="mt-7 flex items-center gap-4 border-t border-line pt-5">
+              <figcaption className="mt-6 flex items-center gap-4 border-t border-line pt-5">
                 <span
                   className={cn(
-                    "flex h-12 w-12 items-center justify-center rounded-full font-heading text-sm font-bold text-white",
+                    "flex h-12 w-12 shrink-0 items-center justify-center rounded-full font-heading text-sm font-bold text-white",
                     t.type === "professional" ? "bg-navy" : "bg-accent"
                   )}
                   aria-hidden="true"

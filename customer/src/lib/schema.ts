@@ -12,7 +12,7 @@ export const jsonLd = {
       address: {
         "@type": "PostalAddress",
         streetAddress: "Sindhu Bhavan Road, Bodakdev",
-        addressLocality: "Ahmedabad",
+        addressLocality: "Junagadh",
         addressRegion: "Gujarat",
         postalCode: "380054",
         addressCountry: "IN",
@@ -50,14 +50,7 @@ export const jsonLd = {
       name: "Brancho Home Services",
       url: "https://brancho.in",
       parentOrganization: { "@id": "https://brancho.in/#organization" },
-      areaServed: [
-        "Ahmedabad",
-        "Rajkot",
-        "Junagadh",
-        "Surat",
-        "Vadodara",
-        "Gandhinagar",
-      ],
+      areaServed: ["Veraval", "Rajkot", "Junagadh"],
       priceRange: "₹₹",
       image: "https://brancho.in/og-image.png",
       aggregateRating: {

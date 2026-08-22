@@ -45,7 +45,7 @@ export default function LegalPage() {
                 <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy text-gold">
                   <BadgeCheck size={20} />
                 </span>
-                <h2 className="mt-5 font-heading text-lg font-semibold text-navy">{r.label}</h2>
+                <h2 className="mt-5 font-heading text-lg font-semibold text-ink">{r.label}</h2>
                 <p className="mt-1 font-mono text-sm font-semibold text-accent-deep">{r.value}</p>
                 <p className="mt-2 text-sm text-muted">{r.note}</p>
               </motion.div>
@@ -92,7 +92,7 @@ export default function LegalPage() {
                   href={l.href}
                   className="group flex items-center justify-between gap-4 rounded-2xl border border-line bg-surface px-7 py-5 transition-all hover:border-accent/40 hover:shadow-lg hover:shadow-navy/5"
                 >
-                  <span className="font-heading text-base font-semibold text-navy group-hover:text-accent-deep">
+                  <span className="font-heading text-base font-semibold text-ink group-hover:text-accent-deep">
                     {l.label}
                   </span>
                   <ArrowRight size={18} className="shrink-0 text-muted transition-all group-hover:translate-x-0.5 group-hover:text-accent" />

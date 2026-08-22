@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { Download, ArrowRight, UserPlus, Star, ShieldCheck } from "lucide-react";
 import MagneticButton from "@/components/ui/MagneticButton";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
@@ -99,17 +100,32 @@ export default function Hero() {
           variants={item}
           className="max-w-4xl text-balance text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl"
         >
-          India&apos;s Trusted{" "}
-          <span className="text-gradient">Home Services</span> Platform.
+          Trusted Services.{" "}
+          <span className="text-gradient">Right at Your Doorstep.</span>
         </motion.h1>
 
         <motion.p
           variants={item}
           className="mt-7 max-w-2xl text-lg leading-relaxed text-white/75 sm:text-xl"
         >
-          Connecting millions of homeowners with background-verified
-          professionals for reliable, transparent and hassle-free home services.
+          Book trusted professionals for everyday home services with Brancho.
         </motion.p>
+
+        <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-2.5">
+          <span className="text-sm font-medium text-white/60">Select your city:</span>
+          {["Veraval", "Rajkot", "Junagadh"].map((city) => (
+            <Link
+              key={city}
+              href="/cities"
+              className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:border-gold hover:bg-gold/15 hover:text-gold"
+            >
+              {city}
+            </Link>
+          ))}
+          <span className="rounded-full border border-dashed border-white/25 px-4 py-1.5 text-sm text-white/50">
+            More cities coming soon
+          </span>
+        </motion.div>
 
         <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
           <MagneticButton href="/app" variant="light" size="lg">

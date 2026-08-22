@@ -5,7 +5,7 @@ import { FOUNDER } from "@/lib/corporate";
 export const metadata: Metadata = {
   title: "Rohan Trivedi — Founder & CEO",
   description:
-    "Meet Rohan Trivedi, founder of Brancho. Read the story behind India's trusted home services platform — from one van in Ahmedabad to 100,000 homes served.",
+    "Meet Rohan Trivedi, founder of Brancho. Read the story behind India's trusted home services platform — from one van in Junagadh to homes across Gujarat.",
   alternates: { canonical: "/founder" },
   openGraph: {
     title: "Rohan Trivedi — Founder & CEO of Brancho",

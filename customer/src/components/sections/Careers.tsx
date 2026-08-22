@@ -19,7 +19,7 @@ const CAREER_PATHS = [
     title: "Join Our Team",
     tagline: "For changemakers",
     description:
-      "Engineers, designers, operations and growth talent building the future of Indian home services from Ahmedabad.",
+      "Engineers, designers, operations and growth talent building the future of Indian home services from Junagadh.",
     points: ["Fast-growing, high-impact roles", "Remote-friendly culture", "Learning and growth budgets"],
     cta: "Explore Openings",
   },
@@ -98,7 +98,7 @@ export default function Careers() {
                   className={`group/link mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all ${
                     i === 0
                       ? "bg-white text-navy hover:gap-3"
-                      : "bg-navy text-white hover:bg-navy-soft"
+                      : "bg-navy text-white hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110"
                   }`}
                 >
                   {path.cta}

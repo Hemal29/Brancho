@@ -76,7 +76,7 @@ export default function ProviderJobs() {
                   <p className="mt-0.5 text-sm text-muted">
                     {formatDateTime(j.scheduledAt)} · {j.addressLine}, {j.city}
                   </p>
-                  {j.notes && <p className="mt-2 rounded-lg bg-secondary p-2 text-xs text-muted">Note: {j.notes}</p>}
+                  {j.notes && <p className="mt-2 rounded-lg bg-surface-soft p-2 text-xs text-muted">Note: {j.notes}</p>}
                 </div>
                 <div className="text-right">
                   <p className="text-lg font-bold text-ink">{formatINR(j.payableAmount)}</p>

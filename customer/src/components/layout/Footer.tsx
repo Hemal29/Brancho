@@ -34,7 +34,7 @@ const footerColumns = [
   {
     title: "Company",
     links: [
-      { label: "About Brancho", href: "/company" },
+      { label: "About Brancho", href: "/about" },
       { label: "Founder", href: "/founder" },
       { label: "Careers", href: "/careers" },
       { label: "Newsroom", href: "/newsroom" },
@@ -56,6 +56,9 @@ const footerColumns = [
     links: [
       { label: "Services", href: "/services" },
       { label: "How It Works", href: "/how-it-works" },
+      { label: "Brancho Professionals", href: "/professionals" },
+      { label: "Technology", href: "/technology" },
+      { label: "Trust & Safety", href: "/trust" },
       { label: "Mobile App", href: "/app" },
       { label: "Cities", href: "/cities" },
       { label: "FAQs", href: "/faqs" },
@@ -87,12 +90,12 @@ export default function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_2.2fr]">
           <div>
             <Link href="/" className="flex items-center gap-2.5" aria-label="Brancho home">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10">
+              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white shadow-lg">
                 <Image
-                  src="/brancho-logo-white.png"
+                  src="/brancho-logo.png"
                   alt="Brancho logo"
-                  width={36}
-                  height={36}
+                  width={38}
+                  height={38}
                   className="object-contain"
                 />
               </span>
@@ -168,7 +171,7 @@ export default function Footer() {
           </p>
           <div className="flex flex-wrap items-center gap-4 text-xs text-white/50">
             <span className="hidden sm:inline">·</span>
-            <span>Made with care in Ahmedabad, Gujarat, India.</span>
+            <span>Made with care in Junagadh, Gujarat, India.</span>
           </div>
         </div>
       </div>

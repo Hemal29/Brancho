@@ -85,11 +85,11 @@ export default function NewsroomPage() {
                     <span>·</span>
                     <span>{post.readTime} read</span>
                   </div>
-                  <h2 className="mt-5 flex-1 font-heading text-lg font-semibold leading-snug text-navy transition-colors group-hover:text-accent-deep">
+                  <h2 className="mt-5 flex-1 font-heading text-lg font-semibold leading-snug text-ink transition-colors group-hover:text-accent-deep">
                     {post.title}
                   </h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted">{post.excerpt}</p>
-                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-navy">
+                  <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-ink">
                     Read more
                     <ArrowUpRight size={14} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </span>

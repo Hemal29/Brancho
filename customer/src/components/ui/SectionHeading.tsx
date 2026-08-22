@@ -35,7 +35,7 @@ export default function SectionHeading({
               "mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em]",
               dark
                 ? "border-white/15 bg-white/5 text-gold"
-                : "border-navy/10 bg-secondary text-accent-deep"
+                : "border-line bg-surface-soft text-accent-deep"
             )}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -58,7 +58,7 @@ export default function SectionHeading({
           <p
             className={cn(
               "mt-6 text-lg leading-relaxed",
-              dark ? "text-white/60" : "text-gray-500"
+              dark ? "text-white/60" : "text-muted"
             )}
           >
             {description}

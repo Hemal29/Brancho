@@ -46,7 +46,6 @@ export default function BookPage() {
   const [couponCode, setCouponCode] = useState("");
   const [coupon, setCoupon] = useState<{ code: string; discount: number; payableAmount: number } | null>(null);
   const [couponMsg, setCouponMsg] = useState("");
-  const [paymentMethod, setPaymentMethod] = useState("upi");
   const [busy, setBusy] = useState(false);
   const [booking, setBooking] = useState<Booking | null>(null);
 
@@ -95,7 +94,7 @@ export default function BookPage() {
           professionalId: professional?.id ?? null,
           addressId: address.id,
           scheduledAt: `${date}T${slot}:00`,
-          paymentMethod,
+          paymentMethod: "cod",
           notes,
           couponCode: coupon?.code,
         }),
@@ -104,19 +103,6 @@ export default function BookPage() {
         alert(b.message || "Could not create booking.");
         setBusy(false);
         return;
-      }
-      if (paymentMethod === "cod") {
-        setBooking({ ...b.data.booking, scheduledAt: `${date}T${slot}:00` });
-        setStep(4);
-        setBusy(false);
-        return;
-      }
-      const p = await api<{ transactionId: string }>("/api/payments", {
-        method: "POST",
-        body: JSON.stringify({ bookingId: b.data.booking.id, method: paymentMethod }),
-      });
-      if (!p.ok) {
-        alert(p.message || "Payment failed, but your booking was saved. Try paying from My Bookings.");
       }
       setBooking({ ...b.data.booking, scheduledAt: `${date}T${slot}:00` });
       setStep(4);
@@ -137,12 +123,12 @@ export default function BookPage() {
     <div className="mx-auto max-w-3xl">
       {/* Stepper */}
       <div className="mb-8 flex items-center justify-center gap-2">
-        {["Service", "Professional", "Payment"].map((label, i) => (
+        {["Service", "Professional", "Confirm"].map((label, i) => (
           <div key={label} className="flex items-center gap-2">
             <span
               className={cn(
                 "flex h-7 w-7 items-center justify-center rounded-full text-xs font-bold",
-                step > i ? "bg-gold text-navy" : step === i + 1 ? "bg-navy text-white" : "bg-secondary text-muted"
+                step > i ? "bg-gold text-navy" : step === i + 1 ? "bg-navy text-white dark:bg-navy-soft" : "bg-surface-soft text-muted"
               )}
             >
               {i + 1}
@@ -204,7 +190,7 @@ export default function BookPage() {
                   professional?.id === p.id ? "border-accent bg-gold/10" : "border-line hover:border-accent/50"
                 )}
               >
-                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-sm font-bold text-navy">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-soft text-sm font-bold text-ink">
                   {p.name.charAt(0)}
                 </div>
                 <div className="min-w-0 flex-1">
@@ -223,7 +209,7 @@ export default function BookPage() {
                 professional === null ? "border-accent bg-gold/10" : "border-line hover:border-accent/50"
               )}
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary text-navy">
+              <div className="flex h-11 w-11 items-center justify-center rounded-full bg-surface-soft text-ink">
                 <Sparkles size={18} />
               </div>
               <div>
@@ -296,7 +282,7 @@ export default function BookPage() {
             placeholder="Notes for the professional (optional)"
           />
 
-          <div className="flex items-center justify-between rounded-xl bg-secondary p-4">
+          <div className="flex items-center justify-between rounded-xl bg-surface-soft p-4">
             <div>
               <p className="text-sm font-semibold text-ink">Service price</p>
               <p className="text-xs text-muted">No hidden charges</p>
@@ -305,18 +291,18 @@ export default function BookPage() {
           </div>
 
           <button onClick={() => setStep(3)} disabled={!date || !slot} className="btn-primary mt-6 w-full py-3.5 disabled:opacity-50">
-            Continue to Payment <ArrowRight size={16} />
+            Continue <ArrowRight size={16} />
           </button>
         </div>
       )}
 
-      {/* STEP 3: Payment */}
+      {/* STEP 3: Confirm */}
       {step === 3 && service && (
         <div>
           <button onClick={() => setStep(2)} className="mb-4 inline-flex items-center gap-1 text-sm font-semibold text-muted hover:text-ink">
             <ChevronLeft size={16} /> Back
           </button>
-          <h2 className="mb-6 font-heading text-2xl font-bold text-ink">Confirm &amp; pay</h2>
+          <h2 className="mb-6 font-heading text-2xl font-bold text-ink">Confirm your booking</h2>
 
           <div className="card mb-6 divide-y divide-line">
             <SummaryRow label="Service" value={service.name} />
@@ -346,20 +332,13 @@ export default function BookPage() {
             )}
           </div>
 
-          <p className="mb-3 text-sm font-semibold text-ink">Payment method</p>
-          <div className="mb-6 grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-            {["upi", "card", "netbanking", "cod"].map((m) => (
-              <button
-                key={m}
-                onClick={() => setPaymentMethod(m)}
-                className={cn(
-                  "rounded-xl border px-3 py-3 text-sm font-semibold capitalize transition-all",
-                  paymentMethod === m ? "border-accent bg-gold/10 text-ink" : "border-line text-muted hover:border-accent/50"
-                )}
-              >
-                {m === "upi" ? "UPI" : m === "cod" ? "Pay on service" : m === "card" ? "Card" : "Net banking"}
-              </button>
-            ))}
+          <p className="mb-3 text-sm font-semibold text-ink">Payment on service completion</p>
+          <div className="mb-6 flex items-start gap-3 rounded-xl border border-line bg-surface-soft p-4 text-sm text-muted">
+            <CheckCircle2 size={18} className="mt-0.5 shrink-0 text-emerald-600" />
+            <span>
+              No online payment needed — pay the professional directly after the service is done. Prices shown below are
+              all you pay.
+            </span>
           </div>
 
           <div className="card mb-6 space-y-2 p-5">
@@ -383,7 +362,7 @@ export default function BookPage() {
 
           <button onClick={confirm} disabled={busy} className="btn-gold w-full py-3.5 disabled:opacity-60">
             {busy && <Loader2 size={16} className="animate-spin" />}
-            {paymentMethod === "cod" ? "Confirm Booking" : "Pay " + formatINR(coupon ? coupon.payableAmount : service.basePrice)}
+            Confirm Booking
           </button>
         </div>
       )}
@@ -398,7 +377,7 @@ export default function BookPage() {
           <p className="mx-auto mt-2 max-w-sm text-sm text-muted">
             Your {booking.serviceName} booking is confirmed. We&apos;ve sent you a notification with the details.
           </p>
-          <div className="mx-auto mt-6 max-w-xs space-y-2 rounded-xl bg-secondary p-4 text-left text-sm">
+          <div className="mx-auto mt-6 max-w-xs space-y-2 rounded-xl bg-surface-soft p-4 text-left text-sm">
             <div className="flex justify-between">
               <span className="text-muted">Booking ID</span>
               <span className="font-bold text-ink">{booking.bookingId}</span>
@@ -409,7 +388,7 @@ export default function BookPage() {
             </div>
             <div className="flex justify-between">
               <span className="text-muted">Status</span>
-              <span className="font-bold capitalize text-emerald-600">{paymentMethod === "cod" ? "Confirmed" : "Paid"}</span>
+              <span className="font-bold capitalize text-emerald-600">Confirmed</span>
             </div>
           </div>
           <div className="mt-8 flex flex-wrap justify-center gap-3">

@@ -40,7 +40,7 @@ export default function AdminLoginPage() {
           Back to website
         </a>
 
-        <div className="rounded-3xl border border-white/10 bg-white p-7 text-ink shadow-2xl sm:p-9">
+        <div className="rounded-3xl border border-line bg-surface p-7 text-ink shadow-2xl sm:p-9">
           <div className="mb-6 flex items-center gap-3">
             <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold">
               <ShieldCheck size={22} />
@@ -75,12 +75,12 @@ export default function AdminLoginPage() {
               />
             </label>
 
-            {error && <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700">{error}</p>}
+            {error && <p className="rounded-lg bg-rose-50 px-3 py-2 text-sm text-rose-700 dark:bg-rose-500/10 dark:text-rose-300">{error}</p>}
 
             <button
               type="submit"
               disabled={busy}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-sm font-semibold text-white transition-all hover:bg-navy-soft disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-navy py-3.5 text-sm font-semibold text-white transition-all hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110 disabled:opacity-60"
             >
               {busy && <Loader2 size={16} className="animate-spin" />}
               Login to Dashboard

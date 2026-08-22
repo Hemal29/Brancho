@@ -14,7 +14,7 @@ function ServiceFAQ() {
   return (
     <section className="bg-surface py-24 lg:py-32">
       <div className="container-wide max-w-3xl">
-        <h2 className="mb-12 text-center font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+        <h2 className="mb-12 text-center font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
           Service FAQs
         </h2>
         <div className="space-y-4">
@@ -113,7 +113,7 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="flex flex-1 flex-col p-7">
-                  <h2 className="font-heading text-xl font-semibold text-navy">{service.title}</h2>
+                  <h2 className="font-heading text-xl font-semibold text-ink">{service.title}</h2>
                   <p className="mt-2.5 text-sm leading-relaxed text-muted">{service.longDescription}</p>
 
                   <ul className="mt-5 space-y-2.5">
@@ -128,7 +128,7 @@ export default function ServicesPage() {
                   <div className="mt-7 flex items-center justify-between border-t border-line pt-6">
                     <div>
                       <p className="text-xs text-muted">Starting at</p>
-                      <p className="font-heading text-lg font-bold text-navy">{service.price}</p>
+                      <p className="font-heading text-lg font-bold text-ink">{service.price}</p>
                     </div>
                     <Link
                       href="/contact"
@@ -156,7 +156,7 @@ export default function ServicesPage() {
             className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 rounded-3xl border border-line bg-surface-soft p-10 text-center sm:flex-row sm:text-left"
           >
             <div>
-              <h2 className="font-heading text-2xl font-semibold text-navy">
+              <h2 className="font-heading text-2xl font-semibold text-ink">
                 Need something custom?
               </h2>
               <p className="mt-2 text-sm text-muted">

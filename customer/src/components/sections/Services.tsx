@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { SERVICES } from "@/lib/data";
+import { SERVICES_DETAILED } from "@/lib/data";
 import { iconMap } from "@/lib/utils";
 
 export default function Services() {
@@ -37,7 +38,7 @@ export default function Services() {
           viewport={{ once: true, margin: "-80px" }}
           className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
         >
-          {SERVICES.map((service) => {
+          {SERVICES_DETAILED.map((service) => {
             const Icon = iconMap[service.icon] ?? iconMap.Home;
             return (
               <motion.article
@@ -59,8 +60,8 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <a
-                  href="/services"
+                <Link
+                  href={`/services/${service.slug}`}
                   className="relative mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-accent-deep transition-colors group-hover:text-accent"
                   aria-label={`Book ${service.title}`}
                 >
@@ -69,7 +70,7 @@ export default function Services() {
                     size={15}
                     className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                   />
-                </a>
+                </Link>
               </motion.article>
             );
           })}
@@ -93,13 +94,13 @@ export default function Services() {
                 you need and we&apos;ll arrange a trusted professional.
               </p>
             </div>
-            <a
+            <Link
               href="/contact"
               className="relative mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy transition-all group-hover:gap-3"
             >
               Request a Service
               <ArrowUpRight size={16} />
-            </a>
+            </Link>
           </motion.article>
         </motion.div>
       </div>

@@ -69,11 +69,11 @@ export default function Loader() {
                 transform="rotate(-90 36 36)"
               />
             </svg>
-            <span className="relative flex h-16 w-16 items-center justify-center">
+            <span className="relative flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-lg">
               <img
-                src="/brancho-logo-white.png"
+                src="/brancho-logo.png"
                 alt=""
-                className="h-16 w-16 object-contain"
+                className="h-14 w-14 object-contain"
               />
             </span>
             <span className="mt-2 text-xs font-medium uppercase tracking-[0.35em] text-white/50">

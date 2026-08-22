@@ -83,12 +83,12 @@ async function main() {
   }));
 
   const profData = [
-    ["Ramesh Kumar", "9824055555", "Ahmedabad", ["ac-cleaning", "water-purifier", "geyser-repair"], 4.9, 820, 5400],
-    ["Suresh Yadav", "9824066666", "Ahmedabad", ["plumbing", "bathroom-cleaning"], 4.8, 640, 4200],
-    ["Vikram Singh", "9824077777", "Ahmedabad", ["electrician", "geyser-repair"], 4.9, 750, 5100],
-    ["Dinesh Rathod", "9824088888", "Ahmedabad", ["carpentry", "furniture-assembly"], 4.7, 430, 2900],
-    ["Kiran Prajapati", "9824099999", "Ahmedabad", ["pest-control", "deep-cleaning", "kitchen-cleaning"], 4.8, 560, 3600],
-    ["Manoj Chauhan", "9824000000", "Ahmedabad", ["painting", "sofa-carpet"], 4.6, 310, 2100],
+    ["Ramesh Kumar", "9824055555", "Veraval", ["ac-cleaning", "water-purifier", "geyser-repair"], 4.9, 820, 5400],
+    ["Suresh Yadav", "9824066666", "Veraval", ["plumbing", "bathroom-cleaning"], 4.8, 640, 4200],
+    ["Vikram Singh", "9824077777", "Rajkot", ["electrician", "geyser-repair"], 4.9, 750, 5100],
+    ["Dinesh Rathod", "9824088888", "Rajkot", ["carpentry", "furniture-assembly"], 4.7, 430, 2900],
+    ["Kiran Prajapati", "9824099999", "Junagadh", ["pest-control", "deep-cleaning", "kitchen-cleaning"], 4.8, 560, 3600],
+    ["Manoj Chauhan", "9824000000", "Junagadh", ["painting", "sofa-carpet"], 4.6, 310, 2100],
   ];
 
   const professionals = [];
@@ -116,7 +116,7 @@ async function main() {
   // Addresses for customers
   const addrIds = [];
   for (const cid of customers) {
-    const r = await q("INSERT INTO Addresses (userId, label, addressLine, city, state, zipCode, isDefault) VALUES (?, 'Home', ?, 'Ahmedabad', 'Gujarat', '3800XX', 1)", [cid, "Sindhu Bhavan Road, Bodakdev, Ahmedabad"]);
+    const r = await q("INSERT INTO Addresses (userId, label, addressLine, city, state, zipCode, isDefault) VALUES (?, 'Home', ?, 'Veraval', 'Gujarat', '362265', 1)", [cid, "Somnath Road, Veraval"]);
     addrIds.push(r.insertId);
   }
 

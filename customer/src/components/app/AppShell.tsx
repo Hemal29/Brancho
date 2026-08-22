@@ -14,7 +14,6 @@ import {
   LayoutDashboard,
   Sparkles,
   CalendarCheck,
-  Wallet,
   MapPin,
   Headphones,
   Bell,
@@ -29,29 +28,20 @@ import {
 import { useAuth } from "@/lib/auth-context";
 import { cn } from "@/lib/utils";
 
+const ADMIN_URL = process.env.NEXT_PUBLIC_ADMIN_URL || "http://localhost:3001";
+
 const NAV_BY_ROLE: Record<
-  "customer" | "admin" | "provider",
+  "customer" | "provider",
   { label: string; href: string; icon: LucideIcon }[]
 > = {
   customer: [
     { label: "Dashboard", href: "/customer", icon: LayoutDashboard },
     { label: "Book a Service", href: "/customer/book", icon: Sparkles },
     { label: "My Bookings", href: "/customer/bookings", icon: CalendarCheck },
-    { label: "Wallet", href: "/customer/wallet", icon: Wallet },
     { label: "Addresses", href: "/customer/addresses", icon: MapPin },
     { label: "Support", href: "/customer/support", icon: Headphones },
     { label: "Notifications", href: "/customer/notifications", icon: Bell },
     { label: "Profile", href: "/customer/profile", icon: User },
-  ],
-  admin: [
-    { label: "Dashboard", href: "/admin", icon: LayoutDashboard },
-    { label: "Bookings", href: "/admin/bookings", icon: CalendarCheck },
-    { label: "Services", href: "/admin/services", icon: Sparkles },
-    { label: "Professionals", href: "/admin/professionals", icon: HardHat },
-    { label: "Users", href: "/admin/users", icon: User },
-    { label: "Coupons", href: "/admin/coupons", icon: TicketPercent },
-    { label: "Reviews", href: "/admin/reviews", icon: Star },
-    { label: "Support", href: "/admin/support", icon: Headphones },
   ],
   provider: [
     { label: "Dashboard", href: "/provider", icon: LayoutDashboard },
@@ -67,7 +57,7 @@ export function AppShell({
   children,
 }: {
   title: string;
-  role: "customer" | "admin" | "provider";
+  role: "customer" | "provider";
   children: React.ReactNode;
 }) {
   const { user, loading, logout } = useAuth();
@@ -80,7 +70,9 @@ export function AppShell({
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setDark(stored ? stored === "dark" : prefers);
+    const next = stored ? stored === "dark" : prefers;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
   }, []);
 
   const toggleDark = () => {
@@ -97,7 +89,11 @@ export function AppShell({
       if (!user) {
         router.replace("/login?redirect=" + role);
       } else if (user.role !== role) {
-        router.replace(user.role === "admin" ? "/admin" : user.role === "provider" ? "/provider" : "/customer");
+        if (user.role === "admin") {
+          window.location.href = `${ADMIN_URL}/admin`;
+        } else {
+          router.replace(user.role === "provider" ? "/provider" : "/customer");
+        }
       }
     }
   }, [loading, user, role, router]);
@@ -114,7 +110,7 @@ export function AppShell({
     );
   }
 
-  const roleLabel = role === "admin" ? "Admin" : role === "provider" ? "Provider" : "Customer";
+  const roleLabel = role === "provider" ? "Provider" : "Customer";
 
   return (
     <div className="flex min-h-screen bg-surface">
@@ -127,8 +123,8 @@ export function AppShell({
       >
         <div className="dot-grid-light absolute inset-0 opacity-20" />
         <div className="relative flex h-16 items-center justify-between border-b border-white/10 px-5">
-          <Link href={role === "admin" ? "/admin" : role === "provider" ? "/provider" : "/customer"} className="flex items-center gap-2.5">
-            <img src="/brancho-logo-white.png" alt="" className="h-8 w-8 object-contain" />
+          <Link href={role === "provider" ? "/provider" : "/customer"} className="flex items-center gap-2.5">
+            <img src="/brancho-logo.png" alt="" className="h-8 w-8 rounded-lg bg-white object-contain p-0.5 shadow-sm" />
             <span className="font-heading text-lg font-bold tracking-tight">Brancho</span>
           </Link>
           <button className="text-white/60 lg:hidden" onClick={() => setMobileOpen(false)} aria-label="Close menu">

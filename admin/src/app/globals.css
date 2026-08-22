@@ -3,6 +3,7 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
+  color-scheme: light;
   --navy: #181a1f;
   --navy-soft: #26292f;
   --navy-deep: #0e0f12;
@@ -21,6 +22,7 @@
 }
 
 .dark {
+  color-scheme: dark;
   --surface: #121317;
   --surface-soft: #191b20;
   --ink: #f5f4ef;
@@ -159,6 +161,10 @@ h6 {
 .dot-grid {
   background-image: radial-gradient(rgba(24, 26, 31, 0.08) 1px, transparent 1px);
   background-size: 24px 24px;
+}
+
+.dark .dot-grid {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px);
 }
 
 .dot-grid-light {

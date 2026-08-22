@@ -45,7 +45,7 @@ export default function MediaPressPage() {
                   </span>
                   <span className="text-xs text-muted">{p.date}</span>
                 </div>
-                <h3 className="mt-5 flex-1 font-heading text-lg font-semibold leading-snug text-navy">
+                <h3 className="mt-5 flex-1 font-heading text-lg font-semibold leading-snug text-ink">
                   {p.title}
                 </h3>
                 <p className="mt-4 border-t border-line pt-4 text-sm font-semibold text-accent-deep">{p.outlet}</p>
@@ -75,7 +75,7 @@ export default function MediaPressPage() {
                 <Mail size={20} />
               </span>
               <div>
-                <h2 className="font-heading text-xl font-semibold text-navy">Media enquiries</h2>
+                <h2 className="font-heading text-xl font-semibold text-ink">Media enquiries</h2>
                 <p className="mt-1 text-sm text-muted">
                   For interviews, quotes and press assets, reach our media desk.
                 </p>

@@ -53,7 +53,7 @@ export default function AdminSupport() {
                 <p className="mt-1.5 text-sm font-semibold text-ink">{t.subject}</p>
                 <p className="text-xs text-muted">{t.customerName} · {formatDateTime(t.createdAt)}</p>
                 <p className="mt-2 text-sm text-ink">{t.message}</p>
-                {t.reply && <p className="mt-2 rounded-lg bg-secondary p-2 text-sm text-muted">Reply: {t.reply}</p>}
+                {t.reply && <p className="mt-2 rounded-lg bg-surface-soft p-2 text-sm text-muted">Reply: {t.reply}</p>}
               </div>
               {t.status !== "resolved" && (
                 <button onClick={() => setOpen(t)} className="btn-primary !px-3 !py-2 !text-xs">
@@ -70,7 +70,7 @@ export default function AdminSupport() {
           <div className="card w-full max-w-lg p-6">
             <h3 className="font-heading text-lg font-semibold text-ink">{open.subject}</h3>
             <p className="mt-1 text-sm text-muted">{open.customerName} · {open.ticketId}</p>
-            <p className="mt-3 rounded-lg bg-secondary p-3 text-sm text-ink">{open.message}</p>
+            <p className="mt-3 rounded-lg bg-surface-soft p-3 text-sm text-ink">{open.message}</p>
             <textarea
               value={reply}
               onChange={(e) => setReply(e.target.value)}

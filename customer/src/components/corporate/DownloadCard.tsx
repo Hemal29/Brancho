@@ -30,7 +30,7 @@ export default function DownloadCard({ item, index = 0 }: DownloadCardProps) {
       <div className="flex items-start justify-between">
         <span
           className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold uppercase tracking-wider ${
-            formatMap[item.format] ?? "bg-secondary text-accent-deep"
+            formatMap[item.format] ?? "bg-accent/10 text-accent-deep"
           }`}
         >
           <FileDown size={13} />
@@ -39,7 +39,7 @@ export default function DownloadCard({ item, index = 0 }: DownloadCardProps) {
         <span className="text-xs text-muted">{item.size}</span>
       </div>
 
-      <h3 className="mt-6 font-heading text-xl font-semibold text-navy">{item.title}</h3>
+      <h3 className="mt-6 font-heading text-xl font-semibold text-ink">{item.title}</h3>
       <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">{item.description}</p>
 
       <div className="mt-5 flex items-center justify-between border-t border-line pt-5">
@@ -49,7 +49,7 @@ export default function DownloadCard({ item, index = 0 }: DownloadCardProps) {
         </div>
         <button
           type="button"
-          className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-xs font-semibold text-white transition-all group-hover:bg-accent"
+          className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-xs font-semibold text-white transition-all group-hover:bg-accent dark:bg-gold dark:text-navy"
         >
           Download
         </button>

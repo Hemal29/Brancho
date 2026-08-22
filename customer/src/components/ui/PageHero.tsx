@@ -39,7 +39,7 @@ export default function PageHero({
       <div
         className={cn(
           "absolute inset-0",
-          dark ? "hero-mesh" : "bg-gradient-to-b from-secondary/60 to-transparent"
+          dark ? "hero-mesh" : "bg-gradient-to-b from-surface-soft/60 to-transparent"
         )}
       />
       {dark && (
@@ -85,7 +85,7 @@ export default function PageHero({
                     "transition-colors",
                     dark
                       ? "text-white/60 hover:text-white"
-                      : "text-muted hover:text-navy"
+                      : "text-muted hover:text-ink"
                   )}
                 >
                   {crumb.label}
@@ -104,7 +104,7 @@ export default function PageHero({
               "mb-6 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em]",
               dark
                 ? "border-white/15 bg-white/5 text-gold"
-                : "border-navy/10 bg-secondary text-accent-deep"
+                : "border-line bg-surface-soft text-accent-deep"
             )}
           >
             <span className="h-1.5 w-1.5 rounded-full bg-accent" />
@@ -118,7 +118,7 @@ export default function PageHero({
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.15 }}
           className={cn(
             "max-w-4xl text-balance text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl",
-            dark ? "text-white" : "text-navy"
+            dark ? "text-white" : "text-ink"
           )}
         >
           {title}

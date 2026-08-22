@@ -39,7 +39,7 @@ export default function FutureDetailPage({ detail }: { detail: FutureDetail }) {
           </span>
           <Link
             href="/future"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-navy transition-colors hover:text-accent-deep"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-ink transition-colors hover:text-accent-deep"
           >
             All pillars
             <ArrowRight size={15} />
@@ -103,7 +103,7 @@ export default function FutureDetailPage({ detail }: { detail: FutureDetail }) {
                   <Check size={20} />
                 </span>
                 <div>
-                  <h3 className="font-heading text-lg font-semibold text-navy">{p.title}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-ink">{p.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted">{p.description}</p>
                 </div>
               </motion.div>
@@ -150,7 +150,7 @@ export default function FutureDetailPage({ detail }: { detail: FutureDetail }) {
                     <Sparkles size={14} />
                     Next pillar
                   </p>
-                  <h2 className="mt-3 font-heading text-2xl font-semibold text-navy transition-colors group-hover:text-accent-deep">
+                  <h2 className="mt-3 font-heading text-2xl font-semibold text-ink transition-colors group-hover:text-accent-deep">
                     {next.name}
                   </h2>
                   <p className="mt-2 max-w-xl text-sm text-muted">{next.description}</p>

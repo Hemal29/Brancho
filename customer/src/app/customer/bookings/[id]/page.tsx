@@ -24,8 +24,6 @@ type BookingDetail = {
   amount: string;
   discountAmount: string;
   payableAmount: string;
-  paymentMethod: string;
-  paymentStatus: string;
   bookingStatus: string;
   couponCode: string | null;
   notes: string | null;
@@ -34,15 +32,12 @@ type BookingDetail = {
   createdAt: string;
 };
 
-type Payment = { id: number; method: string; amount: string; status: string; transactionId: string | null };
-
 const TIMELINE = ["pending", "confirmed", "assigned", "in_progress", "completed"];
 
 export default function BookingDetailPage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
   const [booking, setBooking] = useState<BookingDetail | null>(null);
-  const [payments, setPayments] = useState<Payment[]>([]);
   const [loading, setLoading] = useState(true);
   const [busy, setBusy] = useState(false);
   const [reviewMode, setReviewMode] = useState(false);
@@ -50,10 +45,9 @@ export default function BookingDetailPage() {
   const [comment, setComment] = useState("");
 
   const load = async () => {
-    const res = await api<{ booking: BookingDetail; payments: Payment[] }>(`/api/bookings/${id}`);
+    const res = await api<{ booking: BookingDetail }>(`/api/bookings/${id}`);
     if (res.ok) {
       setBooking(res.data!.booking);
-      setPayments(res.data!.payments);
     } else {
       router.replace("/customer/bookings");
     }
@@ -68,14 +62,6 @@ export default function BookingDetailPage() {
   const updateStatus = async (status: string) => {
     setBusy(true);
     const res = await api(`/api/bookings/${id}`, { method: "PATCH", body: JSON.stringify({ status }) });
-    setBusy(false);
-    if (res.ok) load();
-    else alert(res.message);
-  };
-
-  const pay = async (method: string) => {
-    setBusy(true);
-    const res = await api("/api/payments", { method: "POST", body: JSON.stringify({ bookingId: id, method }) });
     setBusy(false);
     if (res.ok) load();
     else alert(res.message);
@@ -105,7 +91,6 @@ export default function BookingDetailPage() {
 
   const timelineIdx = TIMELINE.indexOf(booking.bookingStatus);
   const canCancel = ["pending", "confirmed"].includes(booking.bookingStatus);
-  const canPay = booking.paymentStatus !== "paid" && booking.bookingStatus === "confirmed" && booking.paymentStatus !== "refunded";
   const canReview = booking.bookingStatus === "completed" && booking.rating === null;
 
   return (
@@ -131,7 +116,7 @@ export default function BookingDetailPage() {
             <div className="flex flex-col items-center gap-1.5">
               <span
                 className={`flex h-7 w-7 items-center justify-center rounded-full text-[11px] font-bold ${
-                  i <= timelineIdx ? "bg-gold text-navy" : "bg-secondary text-muted"
+                  i <= timelineIdx ? "bg-gold text-navy" : "bg-surface-soft text-muted"
                 }`}
               >
                 {i < timelineIdx ? <CheckCircle2 size={14} /> : i + 1}
@@ -181,28 +166,13 @@ export default function BookingDetailPage() {
                 </div>
               )}
               <div className="flex justify-between border-t border-line pt-2">
-                <span className="font-semibold text-ink">Payable</span>
+                <span className="font-semibold text-ink">Total payable</span>
                 <span className="font-heading text-lg font-bold text-ink">{formatINR(booking.payableAmount)}</span>
               </div>
-              <div className="flex justify-between text-xs text-muted">
-                <span>Payment</span>
-                <span className="capitalize">
-                  {booking.paymentMethod} · <Badge status={booking.paymentStatus} />
-                </span>
-              </div>
+              <p className="text-xs text-muted">Pay the professional directly after the service is completed.</p>
             </div>
 
             <div className="mt-5 flex flex-wrap gap-2.5">
-              {canPay && (
-                <button onClick={() => pay("upi")} disabled={busy} className="btn-gold">
-                  {busy && <Loader2 size={14} className="animate-spin" />} Pay {formatINR(booking.payableAmount)}
-                </button>
-              )}
-              {canPay && (
-                <button onClick={() => pay("cod")} disabled={busy} className="btn-outline">
-                  Pay on service
-                </button>
-              )}
               {canCancel && (
                 <button
                   onClick={() => {
@@ -246,31 +216,11 @@ export default function BookingDetailPage() {
         </div>
 
         <div className="space-y-6">
-          {payments.length > 0 && (
-            <div className="card p-5">
-              <h3 className="mb-3 font-heading text-lg font-semibold text-ink">Payments</h3>
-              <div className="space-y-2">
-                {payments.map((p) => (
-                  <div key={p.id} className="flex items-center justify-between rounded-lg bg-secondary p-3 text-sm">
-                    <div>
-                      <p className="font-semibold text-ink capitalize">{p.method}</p>
-                      <p className="text-[11px] text-muted">{p.transactionId || "—"}</p>
-                    </div>
-                    <div className="text-right">
-                      <p className="font-semibold text-ink">{formatINR(p.amount)}</p>
-                      <Badge status={p.status} />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {booking.professionalName && (
             <div className="card p-5">
               <h3 className="mb-3 font-heading text-lg font-semibold text-ink">Your professional</h3>
               <div className="flex items-center gap-3">
-                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-secondary text-base font-bold text-navy">
+                <div className="flex h-12 w-12 items-center justify-center rounded-full bg-surface-soft text-base font-bold text-ink">
                   {booking.professionalName.charAt(0)}
                 </div>
                 <div>

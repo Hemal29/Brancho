@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, ShieldCheck, Clock, CreditCard } from "lucide-react";
+import { Check, ShieldCheck, Clock, IndianRupee } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/sections/CTABand";
 import { STEPS } from "@/lib/data";
@@ -64,7 +64,7 @@ export default function HowItWorksPage() {
       {/* Assurances */}
       <section className="bg-surface py-24 lg:py-32">
         <div className="container-wide">
-          <h2 className="mx-auto mb-14 max-w-2xl text-center font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mx-auto mb-14 max-w-2xl text-center font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
             Every visit, guaranteed.
           </h2>
           <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-2">
@@ -98,7 +98,7 @@ export default function HowItWorksPage() {
               <Clock size={17} className="text-accent" /> On-time arrival, guaranteed
             </span>
             <span className="flex items-center gap-2.5 text-sm text-muted">
-              <CreditCard size={17} className="text-accent" /> Secure digital payments
+              <IndianRupee size={17} className="text-accent" /> Transparent prices, pay after service
             </span>
           </div>
         </div>

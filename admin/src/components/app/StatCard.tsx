@@ -18,7 +18,7 @@ export function StatCard({
       <div className="flex items-center justify-between">
         <span
           className={`flex h-10 w-10 items-center justify-center rounded-xl ${
-            accent ? "bg-gold text-navy" : "bg-secondary text-accent-deep"
+            accent ? "bg-gold text-navy" : "bg-accent/10 text-accent-deep"
           }`}
         >
           <Icon size={18} />
@@ -53,32 +53,32 @@ export function PageHeader({
 
 export function Badge({ status, label }: { status: string; label?: string }) {
   const colors: Record<string, string> = {
-    pending: "bg-amber-100 text-amber-800",
-    confirmed: "bg-sky-100 text-sky-800",
-    assigned: "bg-violet-100 text-violet-800",
-    in_progress: "bg-indigo-100 text-indigo-800",
-    completed: "bg-emerald-100 text-emerald-800",
-    cancelled: "bg-rose-100 text-rose-800",
-    paid: "bg-emerald-100 text-emerald-800",
-    success: "bg-emerald-100 text-emerald-800",
-    failed: "bg-rose-100 text-rose-800",
-    refunded: "bg-amber-100 text-amber-800",
-    open: "bg-amber-100 text-amber-800",
-    resolved: "bg-emerald-100 text-emerald-800",
-    closed: "bg-gray-200 text-gray-600",
-    credit: "bg-emerald-100 text-emerald-800",
-    debit: "bg-rose-100 text-rose-800",
-    active: "bg-sky-100 text-sky-800",
-    blocked: "bg-rose-100 text-rose-800",
-    hidden: "bg-gray-200 text-gray-600",
-    urgent: "bg-rose-100 text-rose-800",
-    approved: "bg-emerald-100 text-emerald-800",
-    rejected: "bg-rose-100 text-rose-800",
+    pending: "bg-amber-100 text-amber-800 dark:bg-amber-400/10 dark:text-amber-300",
+    confirmed: "bg-sky-100 text-sky-800 dark:bg-sky-400/10 dark:text-sky-300",
+    assigned: "bg-violet-100 text-violet-800 dark:bg-violet-400/10 dark:text-violet-300",
+    in_progress: "bg-indigo-100 text-indigo-800 dark:bg-indigo-400/10 dark:text-indigo-300",
+    completed: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    cancelled: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
+    paid: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    success: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    failed: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
+    refunded: "bg-amber-100 text-amber-800 dark:bg-amber-400/10 dark:text-amber-300",
+    open: "bg-amber-100 text-amber-800 dark:bg-amber-400/10 dark:text-amber-300",
+    resolved: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    closed: "bg-gray-200 text-gray-600 dark:bg-white/10 dark:text-muted",
+    credit: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    debit: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
+    active: "bg-sky-100 text-sky-800 dark:bg-sky-400/10 dark:text-sky-300",
+    blocked: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
+    hidden: "bg-gray-200 text-gray-600 dark:bg-white/10 dark:text-muted",
+    urgent: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
+    approved: "bg-emerald-100 text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300",
+    rejected: "bg-rose-100 text-rose-800 dark:bg-rose-400/10 dark:text-rose-300",
   };
   return (
     <span
       className={`inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-semibold capitalize ${
-        colors[status] || "bg-gray-100 text-gray-700"
+        colors[status] || "bg-gray-100 text-gray-700 dark:bg-white/10 dark:text-muted"
       }`}
     >
       {label ?? status.replace("_", " ")}

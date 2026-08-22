@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     "electrician",
     "plumber",
     "Brancho",
-    "home services Ahmedabad",
+    "home services Junagadh",
     "verified professionals",
   ],
   authors: [{ name: "Brancho", url: "https://brancho.in" }],
@@ -99,7 +99,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t!=="light"&&t!=="dark"){t=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}if(t==="dark"){document.documentElement.classList.add("dark")}}catch(e){}})();`,
+          }}
+        />
+      </head>
       <body
         className={`${manrope.variable} ${inter.variable} antialiased`}
       >

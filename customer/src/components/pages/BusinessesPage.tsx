@@ -20,7 +20,7 @@ const BUSINESS_ICONS: Record<string, LucideIcon> = {
 
 const PROMISE = [
   { title: "One brand standard", description: "Every business runs on the same verification, transparency and quality guarantee that built Brancho." },
-  { title: "A shared tech platform", description: "Booking, tracking, payments and quality monitoring are unified across all five businesses." },
+  { title: "A shared tech platform", description: "Booking, tracking and quality monitoring are unified across all five businesses." },
   { title: "One care team", description: "Your support, billing and warranty are handled by a single accountable team." },
 ];
 
@@ -38,7 +38,7 @@ export default function BusinessesPage() {
             <Link
               key={b.slug}
               href={`/businesses/${b.slug}`}
-              className="inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white px-5 py-2.5 text-sm font-semibold text-navy transition-all hover:border-accent hover:text-accent-deep"
+              className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-5 py-2.5 text-sm font-semibold text-ink transition-all hover:border-accent hover:text-accent-deep"
             >
               {b.name}
               <ArrowUpRight size={14} />
@@ -78,7 +78,7 @@ export default function BusinessesPage() {
                         className="text-muted transition-all group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
                       />
                     </div>
-                    <h2 className="mt-6 font-heading text-xl font-semibold text-navy">{b.name}</h2>
+                    <h2 className="mt-6 font-heading text-xl font-semibold text-ink">{b.name}</h2>
                     <p className="mt-1.5 text-sm font-medium text-accent-deep">{b.tagline}</p>
                     <p className="mt-4 flex-1 text-sm leading-relaxed text-muted">{b.description}</p>
                     <div className="mt-6 flex flex-wrap gap-2">

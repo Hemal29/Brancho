@@ -1,88 +1,58 @@
 export const STATS = [
   { value: 100, suffix: "K+", label: "Happy Customers" },
-  { value: 15, suffix: "+", label: "Services" },
+  { value: 8, suffix: "", label: "Services" },
   { value: 5000, suffix: "+", label: "Verified Professionals" },
   { value: 25, suffix: "+", label: "Cities" },
 ];
 
 export const SERVICES = [
   {
-    title: "AC Cleaning",
-    description:
-      "Deep cleaning, gas refilling and preventive maintenance to keep your cooling at peak efficiency.",
-    icon: "Snowflake",
-  },
-  {
-    title: "Deep Home Cleaning",
-    description:
-      "Hospital-grade deep cleaning for every corner of your home, from ceilings to baseboards.",
-    icon: "Home",
-  },
-  {
-    title: "Electrician",
+    title: "Brancho Electric Care",
     description:
       "Certified electricians for wiring, fixtures, repairs and safety audits — done right the first time.",
     icon: "Zap",
   },
   {
-    title: "Plumbing",
+    title: "Brancho Plumbing Care",
     description:
       "From leaking taps to full bathroom fittings, licensed plumbers with upfront pricing.",
     icon: "Droplets",
   },
   {
-    title: "Carpenter",
+    title: "Brancho Washing Care",
     description:
-      "Furniture assembly, repair and custom woodwork crafted with precision and care.",
-    icon: "Hammer",
-  },
-  {
-    title: "Painting",
-    description:
-      "Interior and exterior painting with premium paints, neat edges and zero mess.",
-    icon: "Paintbrush",
-  },
-  {
-    title: "Appliance Repair",
-    description:
-      "Genuine spares and skilled technicians for your kitchen and household appliances.",
-    icon: "Wrench",
-  },
-  {
-    title: "Washing Machine Repair",
-    description:
-      "Front-load and top-load repairs, servicing and installation from verified experts.",
+      "Front-load and top-load washing machine repairs, servicing and installation from verified experts.",
     icon: "WashingMachine",
   },
   {
-    title: "Refrigerator Repair",
+    title: "Brancho AC Care",
+    description:
+      "Deep cleaning, gas refilling and preventive maintenance to keep your cooling at peak efficiency.",
+    icon: "Snowflake",
+  },
+  {
+    title: "Brancho Refrigerator Care",
     description:
       "Cooling problems, gas leaks and door seals — diagnosed and fixed at your doorstep.",
     icon: "Refrigerator",
   },
   {
-    title: "RO Service",
+    title: "Brancho Beauty At Home",
+    description:
+      "Salon-quality beauty and grooming services delivered at home by trained professionals.",
+    icon: "Sparkles",
+  },
+  {
+    title: "Brancho Power Care",
+    description:
+      "Inverter, battery and backup power solutions installed and maintained by experts.",
+    icon: "BatteryCharging",
+  },
+  {
+    title: "Brancho RO Water Purifier Care",
     description:
       "Filter replacement, TDS balancing and full RO purification system servicing.",
     icon: "Droplet",
-  },
-  {
-    title: "Kitchen Cleaning",
-    description:
-      "Chimney, hob and countertop deep cleaning that leaves your kitchen spotless.",
-    icon: "UtensilsCrossed",
-  },
-  {
-    title: "Bathroom Cleaning",
-    description:
-      "Scrubbing, descaling and sanitising for a bathroom that feels brand new.",
-    icon: "ShowerHead",
-  },
-  {
-    title: "Pest Control",
-    description:
-      "Safe, eco-friendly pest management for cockroaches, termites, rodents and more.",
-    icon: "Bug",
   },
 ];
 
@@ -90,8 +60,6 @@ export const WHY_BRANCHO_BENEFITS = [
   { title: "Background Verified", description: "Every partner passes police-verified background checks." },
   { title: "Upfront Pricing", description: "Transparent quotes before any work begins. No surprises." },
   { title: "Online Booking", description: "Book a trusted professional in under two minutes." },
-  { title: "Digital Payments", description: "Pay securely in-app with full digital receipts." },
-  { title: "Live Tracking", description: "Watch your professional arrive in real time." },
   { title: "Professional Uniform", description: "Trained, uniformed professionals you can identify instantly." },
   { title: "Customer Support", description: "Dedicated 24/7 support, in your language." },
   { title: "Warranty", description: "Workmanship warranties on select services." },
@@ -101,16 +69,15 @@ export const WHY_BRANCHO_BENEFITS = [
 export const STEPS = [
   { step: "01", title: "Choose Service", description: "Pick the service you need from our curated catalogue." },
   { step: "02", title: "Pick Date & Time", description: "Select a slot that suits your schedule." },
-  { step: "03", title: "Verified Professional Arrives", description: "Track your professional as they head to your home." },
-  { step: "04", title: "Complete Work", description: "Work is done to a checklist, with photos and sign-off." },
-  { step: "05", title: "Secure Digital Payment", description: "Pay only for what's delivered, securely in-app." },
+  { step: "03", title: "Verified Professional Arrives", description: "A verified professional arrives at your doorstep on time." },
+  { step: "04", title: "Complete Work", description: "Work is done to a checklist, with photos and sign-off. Pay after service." },
 ];
 
 export const CUSTOMER_APP_FEATURES = [
   { title: "Book Services", description: "Book any service in under two minutes." },
-  { title: "Track Technician", description: "Live location of your professional, on arrival." },
-  { title: "Manage Orders", description: "All bookings and invoices in one place." },
-  { title: "Online Payments", description: "UPI, cards and wallets with instant receipts." },
+  { title: "Pick Date & Time", description: "Choose the slot that works for you." },
+  { title: "Manage Orders", description: "All bookings in one simple place." },
+  { title: "Reminders & Alerts", description: "Timely updates about every visit." },
   { title: "Ratings", description: "Rate every visit to keep quality high." },
 ];
 
@@ -146,7 +113,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Priya Shah",
-    location: "Ahmedabad",
+    location: "Veraval",
     rating: 5,
     quote:
       "The technician arrived exactly on time in uniform, finished the AC deep clean in under an hour, and showed me before-and-after photos. This is how home services should feel.",
@@ -155,7 +122,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Rahul Mehta",
-    location: "Surat",
+    location: "Rajkot",
     rating: 5,
     quote:
       "Transparent pricing changed everything for me. I knew the exact cost before anyone stepped into my home. No haggling, no hidden charges, just honest work.",
@@ -164,7 +131,7 @@ export const TESTIMONIALS = [
   {
     type: "customer",
     name: "Anjali Desai",
-    location: "Rajkot",
+    location: "Junagadh",
     rating: 5,
     quote:
       "As a working professional, live tracking means I never have to wait around. Brancho's app feels like booking a cab, but for my home.",
@@ -173,7 +140,7 @@ export const TESTIMONIALS = [
   {
     type: "professional",
     name: "Suresh Kumar",
-    location: "Vadodara",
+    location: "Veraval",
     rating: 5,
     quote:
       "I've been a service partner for two years. Steady work, fair earnings paid on time, and a team that genuinely respects professionals. I'm proud to work with Brancho.",
@@ -182,7 +149,7 @@ export const TESTIMONIALS = [
   {
     type: "professional",
     name: "Manoj Rathod",
-    location: "Gandhinagar",
+    location: "Junagadh",
     rating: 5,
     quote:
       "The training, the uniform, the tools — Brancho treats us like the professionals we are. My customers trust me instantly because I'm part of Brancho.",
@@ -200,12 +167,9 @@ export const TESTIMONIALS = [
 ];
 
 export const CITIES = [
-  { name: "Ahmedabad", status: "live", x: 47, y: 52 },
+  { name: "Veraval", status: "live", x: 22, y: 68 },
   { name: "Rajkot", status: "live", x: 31, y: 55 },
   { name: "Junagadh", status: "live", x: 26, y: 63 },
-  { name: "Surat", status: "live", x: 57, y: 66 },
-  { name: "Vadodara", status: "live", x: 49, y: 58 },
-  { name: "Gandhinagar", status: "live", x: 48, y: 47 },
 ];
 
 export const NEWS = [
@@ -261,7 +225,7 @@ export const FAQS = [
   {
     question: "Which cities is Brancho available in?",
     answer:
-      "Brancho currently operates across 25+ cities including Ahmedabad, Rajkot, Junagadh, Surat, Vadodara and Gandhinagar. We're expanding rapidly across Gujarat and India — check the app for your city.",
+      "Brancho currently operates in Veraval, Rajkot and Junagadh. We're expanding step by step across Gujarat — check the app for your city.",
   },
   {
     question: "Can I reschedule or cancel a booking?",
@@ -303,7 +267,7 @@ export const COMPANY_LINKS = [
 export const CONTACT = {
   email: "support@brancho.in",
   phone: "+91 1800 123 4567",
-  address: "Corporate House, Sindhu Bhavan Road, Bodakdev, Ahmedabad, Gujarat 380054",
+  address: "Somnath Road, Veraval, Gujarat 362265",
 };
 
 export type Service = {
@@ -320,53 +284,15 @@ export type Service = {
 
 export const SERVICES_DETAILED: Service[] = [
   {
-    slug: "ac-cleaning",
-    title: "AC Cleaning",
-    description:
-      "Deep cleaning, gas refilling and preventive maintenance to keep your cooling at peak efficiency.",
-    longDescription:
-      "Our certified AC technicians strip down, clean and reassemble your air conditioner with professional tools, anti-bacterial sprays and a full performance check. We clean filters, coils, fins and condensate trays so your AC cools faster, smells fresher and uses less power.",
-    icon: "Snowflake",
-    image: "/services/ac-cleaning.svg",
-    price: "From ₹499",
-    duration: "45–60 min",
-    includes: [
-      "Indoor & outdoor unit cleaning",
-      "Anti-bacterial coil spray",
-      "Gas pressure & cooling check",
-      "Remote & filter sanitisation",
-      "Post-service photos",
-    ],
-  },
-  {
-    slug: "deep-home-cleaning",
-    title: "Deep Home Cleaning",
-    description:
-      "Hospital-grade deep cleaning for every corner of your home, from ceilings to baseboards.",
-    longDescription:
-      "A 2,000-point cleaning checklist covering every room. Our team sanitises ceilings, walls, tiles, kitchen, bathrooms, furniture and floors using eco-friendly products and colour-coded equipment, so nothing is ever cross-contaminated.",
-    icon: "Home",
-    image: "/services/deep-home-cleaning.svg",
-    price: "From ₹1,999",
-    duration: "3–6 hours",
-    includes: [
-      "Kitchen & bathroom detailing",
-      "Ceiling, wall & fan cleaning",
-      "Upholstery & sofa vacuuming",
-      "Floor mopping & polishing",
-      "Eco-friendly products",
-    ],
-  },
-  {
-    slug: "electrician",
-    title: "Electrician",
+    slug: "electric-care",
+    title: "Brancho Electric Care",
     description:
       "Certified electricians for wiring, fixtures, repairs and safety audits — done right the first time.",
     longDescription:
       "Licensed electricians handle everything from a flickering light to a full home rewire. Every job includes a safety check, and all materials are brand-grade with transparent billing for parts.",
     icon: "Zap",
     image: "/services/electrician.svg",
-    price: "From ₹299",
+    price: "From ₹249",
     duration: "30–90 min",
     includes: [
       "Wiring & switchboard repairs",
@@ -377,15 +303,15 @@ export const SERVICES_DETAILED: Service[] = [
     ],
   },
   {
-    slug: "plumbing",
-    title: "Plumbing",
+    slug: "plumbing-care",
+    title: "Brancho Plumbing Care",
     description:
       "From leaking taps to full bathroom fittings, licensed plumbers with upfront pricing.",
     longDescription:
       "Leak detection, tap and valve replacement, tank cleaning and complete bathroom fittings. Licensed plumbers arrive with their own tools and a transparent quote before work begins.",
     icon: "Droplets",
     image: "/services/plumbing.svg",
-    price: "From ₹349",
+    price: "From ₹299",
     duration: "30–90 min",
     includes: [
       "Leakage & seepage repair",
@@ -396,65 +322,10 @@ export const SERVICES_DETAILED: Service[] = [
     ],
   },
   {
-    slug: "carpenter",
-    title: "Carpenter",
+    slug: "washing-care",
+    title: "Brancho Washing Care",
     description:
-      "Furniture assembly, repair and custom woodwork crafted with precision and care.",
-    longDescription:
-      "From IKEA assembly to bespoke wardrobes, our carpenters work cleanly and precisely — with minimal dust, careful finishing and honest pricing on materials.",
-    icon: "Hammer",
-    image: "/services/carpenter.svg",
-    price: "From ₹399",
-    duration: "1–3 hours",
-    includes: [
-      "Furniture assembly & repair",
-      "Door, window & handle fixes",
-      "Custom woodwork & joinery",
-      "Cleaning after every job",
-    ],
-  },
-  {
-    slug: "painting",
-    title: "Painting",
-    description:
-      "Interior and exterior painting with premium paints, neat edges and zero mess.",
-    longDescription:
-      "Colour consultation, surface preparation and expert application. We use low-VOC premium paints, protect your furniture, and clean up completely — leaving crisp, gallery-worthy edges.",
-    icon: "Paintbrush",
-    image: "/services/painting.svg",
-    price: "From ₹14/sq ft",
-    duration: "1–5 days",
-    includes: [
-      "Colour consultation & samples",
-      "Surface preparation & putty",
-      "Two-coat premium painting",
-      "Edge detailing & finishing",
-      "Complete post-work cleanup",
-    ],
-  },
-  {
-    slug: "appliance-repair",
-    title: "Appliance Repair",
-    description:
-      "Genuine spares and skilled technicians for your kitchen and household appliances.",
-    longDescription:
-      "Microwave ovens, water heaters, geysers, induction cooktops and more — diagnosed and repaired with genuine spares and a follow-up quality call.",
-    icon: "Wrench",
-    image: "/services/appliance-repair.svg",
-    price: "From ₹399",
-    duration: "45–90 min",
-    includes: [
-      "Complete diagnostic report",
-      "Genuine spare parts",
-      "Standard 90-day warranty",
-      "Fixed visit charge",
-    ],
-  },
-  {
-    slug: "washing-machine-repair",
-    title: "Washing Machine Repair",
-    description:
-      "Front-load and top-load repairs, servicing and installation from verified experts.",
+      "Front-load and top-load washing machine repairs, servicing and installation from verified experts.",
     longDescription:
       "Specialist technicians for drum problems, leaks, draining faults and noise issues on every major brand. We also install and do annual servicing of your machine.",
     icon: "WashingMachine",
@@ -469,8 +340,27 @@ export const SERVICES_DETAILED: Service[] = [
     ],
   },
   {
-    slug: "refrigerator-repair",
-    title: "Refrigerator Repair",
+    slug: "ac-care",
+    title: "Brancho AC Care",
+    description:
+      "Deep cleaning, gas refilling and preventive maintenance to keep your cooling at peak efficiency.",
+    longDescription:
+      "Our certified AC technicians strip down, clean and reassemble your air conditioner with professional tools, anti-bacterial sprays and a full performance check. We clean filters, coils, fins and condensate trays so your AC cools faster, smells fresher and uses less power.",
+    icon: "Snowflake",
+    image: "/services/ac-cleaning.svg",
+    price: "From ₹449",
+    duration: "45–60 min",
+    includes: [
+      "Indoor & outdoor unit cleaning",
+      "Anti-bacterial coil spray",
+      "Gas pressure & cooling check",
+      "Remote & filter sanitisation",
+      "Post-service photos",
+    ],
+  },
+  {
+    slug: "refrigerator-care",
+    title: "Brancho Refrigerator Care",
     description:
       "Cooling problems, gas leaks and door seals — diagnosed and fixed at your doorstep.",
     longDescription:
@@ -487,8 +377,44 @@ export const SERVICES_DETAILED: Service[] = [
     ],
   },
   {
-    slug: "ro-service",
-    title: "RO Service",
+    slug: "beauty-at-home",
+    title: "Brancho Beauty At Home",
+    description:
+      "Salon-quality beauty and grooming services delivered at home by trained professionals.",
+    longDescription:
+      "Enjoy salon-quality beauty and wellness services without stepping out. Brancho Beauty At Home brings trained, hygiene-certified beauticians to your doorstep with professional products and sanitised kits — for facials, clean-ups, waxing, manicure, pedicure and more.",
+    icon: "Sparkles",
+    image: "/services/beauty-at-home.svg",
+    price: "Starting from ₹—",
+    duration: "60–120 min",
+    includes: [
+      "Trained & hygiene-certified beauticians",
+      "Single-use, sanitised kits",
+      "Professional branded products",
+      "Services for women, by women professionals",
+    ],
+  },
+  {
+    slug: "power-care",
+    title: "Brancho Power Care",
+    description:
+      "Inverter, battery and backup power solutions installed and maintained by experts.",
+    longDescription:
+      "Keep your home powered through every outage. Brancho Power Care covers inverter installation, battery check-ups, wiring safety inspections and backup power maintenance by certified electricians who follow strict safety standards.",
+    icon: "BatteryCharging",
+    image: "/services/power-care.svg",
+    price: "Starting from ₹—",
+    duration: "45–90 min",
+    includes: [
+      "Inverter & battery installation",
+      "Battery water top-up & health check",
+      "Wiring safety inspection",
+      "Load assessment & advice",
+    ],
+  },
+  {
+    slug: "ro-water-purifier-care",
+    title: "Brancho RO Water Purifier Care",
     description:
       "Filter replacement, TDS balancing and full RO purification system servicing.",
     longDescription:
@@ -502,60 +428,6 @@ export const SERVICES_DETAILED: Service[] = [
       "TDS balancing",
       "Tank & UV lamp cleaning",
       "Genuine replacement parts",
-    ],
-  },
-  {
-    slug: "kitchen-cleaning",
-    title: "Kitchen Cleaning",
-    description:
-      "Chimney, hob and countertop deep cleaning that leaves your kitchen spotless.",
-    longDescription:
-      "Degrease the chimney, hob, exhaust and backsplash with steam and eco-solvents. We leave your kitchen gleaming, fresh and food-safe.",
-    icon: "UtensilsCrossed",
-    image: "/services/kitchen-cleaning.svg",
-    price: "From ₹699",
-    duration: "1–2 hours",
-    includes: [
-      "Chimney & exhaust degreasing",
-      "Hob, sink & countertop shine",
-      "Cabinet & tile detailing",
-      "Food-safe sanitisation",
-    ],
-  },
-  {
-    slug: "bathroom-cleaning",
-    title: "Bathroom Cleaning",
-    description:
-      "Scrubbing, descaling and sanitising for a bathroom that feels brand new.",
-    longDescription:
-      "Bathroom deep clean with anti-scale treatments, glass and mirror polishing, grout cleaning and complete disinfection using bathroom-safe products.",
-    icon: "ShowerHead",
-    image: "/services/bathroom-cleaning.svg",
-    price: "From ₹599",
-    duration: "1–2 hours",
-    includes: [
-      "Scale & hard-water removal",
-      "Tiles, taps & fixtures shine",
-      "Mirror & glass polishing",
-      "Full sanitisation",
-    ],
-  },
-  {
-    slug: "pest-control",
-    title: "Pest Control",
-    description:
-      "Safe, eco-friendly pest management for cockroaches, termites, rodents and more.",
-    longDescription:
-      "Professional, child- and pet-safe pest treatments for cockroaches, ants, termites, bed bugs and rodents, with a 3-month service guarantee and follow-up visits.",
-    icon: "Bug",
-    image: "/services/pest-control.svg",
-    price: "From ₹999",
-    duration: "1–3 hours",
-    includes: [
-      "Site inspection & treatment plan",
-      "Eco-friendly pest control",
-      "Child & pet-safe chemicals",
-      "3-month service guarantee",
     ],
   },
 ];
@@ -614,42 +486,42 @@ export const JOBS = [
   {
     title: "Senior Full-Stack Engineer",
     team: "Engineering",
-    location: "Ahmedabad / Remote",
+    location: "Junagadh / Remote",
     type: "Full-time",
     description: "Build the platform that allocates, tracks and guarantees thousands of home services daily.",
   },
   {
     title: "Product Designer",
     team: "Design",
-    location: "Ahmedabad",
+    location: "Junagadh",
     type: "Full-time",
     description: "Design premium, accessible experiences for customers and service professionals.",
   },
   {
-    title: "City Operations Manager — Surat",
+    title: "City Operations Manager — Rajkot",
     team: "Operations",
-    location: "Surat",
+    location: "Rajkot",
     type: "Full-time",
     description: "Own partner quality, supply growth and customer satisfaction for a full city.",
   },
   {
     title: "Data Scientist, Trust & Safety",
     team: "Data",
-    location: "Ahmedabad / Remote",
+    location: "Junagadh / Remote",
     type: "Full-time",
     description: "Build ML models that catch quality issues and protect every home visit.",
   },
   {
     title: "Customer Success Lead",
     team: "Support",
-    location: "Ahmedabad",
+    location: "Junagadh",
     type: "Full-time",
     description: "Lead a world-class support team that answers in minutes, not days.",
   },
   {
     title: "Brand & Communications Manager",
     team: "Marketing",
-    location: "Ahmedabad",
+    location: "Junagadh",
     type: "Full-time",
     description: "Tell the Brancho story to millions of Indian homes with craft and clarity.",
   },
@@ -684,8 +556,8 @@ export const UPCOMING_CITIES = [
 ];
 
 export const COMPANY_TIMELINE = [
-  { year: "2019", title: "Founded in Ahmedabad", description: "Brancho begins with one van, three professionals and a promise of trust." },
-  { year: "2021", title: "Gujarat-wide expansion", description: "5,000+ professionals and 25+ cities join the Brancho network." },
+  { year: "2019", title: "Founded in Junagadh", description: "Brancho begins with one van, three professionals and a promise of trust." },
+  { year: "2021", title: "Gujarat expansion", description: "Brancho grows across Saurashtra, reaching Rajkot and Veraval." },
   { year: "2023", title: "Technology platform", description: "AI allocation, live tracking and digital-first operations go live." },
   { year: "2026", title: "National vision", description: "Serving over 100,000 families with a national roadmap ahead." },
 ];

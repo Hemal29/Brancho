@@ -46,7 +46,7 @@ export default function LegalLayout({ title, updated, sections, intro }: LegalLa
                 <li key={s.id}>
                   <a
                     href={`#${s.id}`}
-                    className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 text-sm text-muted transition-colors hover:border-accent hover:text-navy"
+                    className="-ml-px block border-l-2 border-transparent py-1.5 pl-4 text-sm text-muted transition-colors hover:border-accent hover:text-ink"
                   >
                     {s.title}
                   </a>
@@ -78,7 +78,7 @@ export default function LegalLayout({ title, updated, sections, intro }: LegalLa
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: (i % 3) * 0.05 }}
                 className="mb-12 scroll-mt-28"
               >
-                <h2 className="mb-4 font-heading text-2xl font-semibold text-navy">
+                <h2 className="mb-4 font-heading text-2xl font-semibold text-ink">
                   {String(i + 1).padStart(2, "0")} — {section.title}
                 </h2>
                 {section.body.map((paragraph, j) => (
@@ -96,7 +96,7 @@ export default function LegalLayout({ title, updated, sections, intro }: LegalLa
               </p>
               <Link
                 href="/contact"
-                className="mt-5 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy transition-all hover:bg-secondary"
+                className="mt-5 inline-flex items-center gap-2 rounded-full bg-surface px-6 py-3 text-sm font-semibold text-ink transition-all hover:bg-surface-soft"
               >
                 Contact Brancho
               </Link>

@@ -23,7 +23,7 @@ export default function NotificationsPage() {
 
   return (
     <div>
-      <PageHeader title="Notifications" description="Stay updated on your bookings and payments." />
+      <PageHeader title="Notifications" description="Stay updated on your bookings and service visits." />
       {loading ? (
         <div className="flex h-32 items-center justify-center">
           <Loader2 size={24} className="animate-spin text-accent" />
@@ -38,7 +38,7 @@ export default function NotificationsPage() {
         <div className="space-y-2.5">
           {items.map((n) => (
             <div key={n.id} className={`card flex items-start gap-3 p-4 ${n.isRead === 0 ? "border-accent/40 bg-gold/5" : ""}`}>
-              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-lg">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-surface-soft text-lg">
                 {ICONS[n.type] || "🔔"}
               </span>
               <div className="min-w-0 flex-1">

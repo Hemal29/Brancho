@@ -16,6 +16,8 @@ import {
   Briefcase,
   Store,
   Hotel,
+  Sparkles,
+  BatteryCharging,
   type LucideIcon,
 } from "lucide-react";
 
@@ -41,6 +43,8 @@ export const iconMap: Record<string, LucideIcon> = {
   Briefcase,
   Store,
   Hotel,
+  Sparkles,
+  BatteryCharging,
 };
 
 export function formatNumber(value: number) {

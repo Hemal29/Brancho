@@ -20,14 +20,14 @@ const TIMELINE = [
     year: "2019",
     title: "Founded",
     description:
-      "Brancho was born in Ahmedabad with a simple belief — every Indian home deserves trusted, professional service.",
+      "Brancho was born in Junagadh with a simple belief — every Indian home deserves trusted, professional service.",
   },
   {
     icon: Building2,
     year: "2021",
     title: "Expansion",
     description:
-      "Rapid growth across Gujarat. 5,000+ verified professionals and 25+ cities joined the Brancho network.",
+      "Steady growth across Gujarat. Verified professionals serving Veraval, Rajkot and Junagadh.",
   },
   {
     icon: Cpu,

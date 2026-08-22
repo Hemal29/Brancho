@@ -12,7 +12,6 @@ import {
   History,
   CalendarCheck,
   MapPin,
-  CreditCard,
   Clock,
   CircleDollarSign,
   type LucideIcon,
@@ -21,16 +20,17 @@ import {
 type PhoneMockupProps = {
   title: string;
   features: { title: string; description: string }[];
-  icons: LucideIcon[];
+  icons?: LucideIcon[];
   theme: "customer" | "provider";
+  compact?: boolean;
 };
 
-const CUSTOMER_ICONS: LucideIcon[] = [CalendarCheck, MapPin, ClipboardList, CreditCard, Star];
+const CUSTOMER_ICONS: LucideIcon[] = [CalendarCheck, Clock, ClipboardList, Bell, Star];
 const PROVIDER_ICONS: LucideIcon[] = [Bell, Navigation, CircleDollarSign, Clock, History];
 
-export default function PhoneMockup({ title, features, icons, theme }: PhoneMockupProps) {
+export default function PhoneMockup({ title, features, icons, theme, compact = false }: PhoneMockupProps) {
   const isCustomer = theme === "customer";
-  const usedIcons = icons.length ? icons : isCustomer ? CUSTOMER_ICONS : PROVIDER_ICONS;
+  const usedIcons = icons && icons.length ? icons : isCustomer ? CUSTOMER_ICONS : PROVIDER_ICONS;
 
   return (
     <div className="flex flex-col items-center">
@@ -76,7 +76,7 @@ export default function PhoneMockup({ title, features, icons, theme }: PhoneMock
                 <div>
                   <p className="text-[11px] font-semibold text-navy">AC Deep Cleaning</p>
                   <p className="text-[9px] text-muted">
-                    {isCustomer ? "Today · 5:00 PM" : "10:00 AM · Bodakdev"}
+                    {isCustomer ? "Today · 5:00 PM" : "10:00 AM · Veraval"}
                   </p>
                 </div>
               </div>
@@ -89,7 +89,7 @@ export default function PhoneMockup({ title, features, icons, theme }: PhoneMock
                 />
               </div>
               <p className="mt-1.5 text-[9px] font-medium text-muted">
-                {isCustomer ? "Technician en route · 12 min away" : "Next job after this"}
+                {isCustomer ? "Professional assigned · on time" : "Next job after this"}
               </p>
             </div>
 
@@ -139,30 +139,34 @@ export default function PhoneMockup({ title, features, icons, theme }: PhoneMock
         </motion.div>
       </div>
 
-      <h3 className="font-heading text-2xl font-semibold text-ink">{title}</h3>
-      <ul className="mt-6 space-y-3.5">
-        {features.map((feature, i) => {
-          const Icon = usedIcons[i] ?? usedIcons[0];
-          return (
-            <motion.li
-              key={feature.title}
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="flex items-start gap-3"
-            >
-              <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-gold">
-                <Icon size={15} />
-              </span>
-              <div>
-                <p className="font-semibold text-ink">{feature.title}</p>
-                <p className="text-sm text-muted">{feature.description}</p>
-              </div>
-            </motion.li>
-          );
-        })}
-      </ul>
+      {compact ? null : (
+        <>
+          <h3 className="font-heading text-2xl font-semibold text-ink">{title}</h3>
+          <ul className="mt-6 space-y-3.5">
+            {features.map((feature, i) => {
+              const Icon = usedIcons[i] ?? usedIcons[0];
+              return (
+                <motion.li
+                  key={feature.title}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  className="flex items-start gap-3"
+                >
+                  <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-navy text-gold">
+                    <Icon size={15} />
+                  </span>
+                  <div>
+                    <p className="font-semibold text-ink">{feature.title}</p>
+                    <p className="text-sm text-muted">{feature.description}</p>
+                  </div>
+                </motion.li>
+              );
+            })}
+          </ul>
+        </>
+      )}
     </div>
   );
 }

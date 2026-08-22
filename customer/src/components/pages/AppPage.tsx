@@ -137,7 +137,7 @@ export default function AppPage() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="mx-auto max-w-2xl text-center"
           >
-            <h2 className="font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               Get the Brancho app today
             </h2>
             <p className="mt-4 text-muted">

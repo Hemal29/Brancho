@@ -20,7 +20,7 @@ export default function ContactPage() {
       icon: MapPin,
       title: "Corporate Office",
       lines: [CONTACT.address],
-      href: "https://maps.google.com/?q=Bodakdev,Ahmedabad",
+      href: "https://maps.google.com/?q=Somnath+Road,Veraval",
       external: true,
     },
     {
@@ -102,7 +102,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Your name"
-                      className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                      className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                     />
                   </div>
                   <div>
@@ -115,7 +115,7 @@ export default function ContactPage() {
                       type="tel"
                       required
                       placeholder="+91 98765 43210"
-                      className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                      className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                     />
                   </div>
                 </div>
@@ -129,7 +129,7 @@ export default function ContactPage() {
                     name="email"
                     type="email"
                     placeholder="you@example.com"
-                    className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                    className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                   />
                 </div>
 
@@ -142,7 +142,7 @@ export default function ContactPage() {
                     name="service"
                     required
                     defaultValue=""
-                    className="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                    className="w-full rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                   >
                     <option value="" disabled>
                       Select an option
@@ -166,13 +166,13 @@ export default function ContactPage() {
                     rows={4}
                     required
                     placeholder="How can we help?"
-                    className="w-full resize-none rounded-xl border border-line bg-white px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
+                    className="w-full resize-none rounded-xl border border-line bg-surface px-4 py-3.5 text-sm text-ink placeholder:text-muted/60 focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="group flex w-full items-center justify-center gap-2 rounded-full bg-navy py-4 text-sm font-semibold text-white transition-all hover:bg-navy-soft hover:shadow-xl hover:shadow-navy/20"
+                  className="group flex w-full items-center justify-center gap-2 rounded-full bg-navy py-4 text-sm font-semibold text-white transition-all hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110 hover:shadow-xl hover:shadow-navy/20"
                 >
                   Send Message
                   <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
@@ -203,12 +203,12 @@ export default function ContactPage() {
                   href={card.href}
                   target={card.external ? "_blank" : undefined}
                   rel={card.external ? "noopener noreferrer" : undefined}
-                  className="group rounded-2xl border border-line bg-surface-soft p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-white hover:shadow-xl hover:shadow-navy/10"
+                  className="group rounded-2xl border border-line bg-surface-soft p-6 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-surface hover:shadow-xl hover:shadow-navy/10"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-navy text-gold transition-colors group-hover:bg-accent group-hover:text-white">
                     <card.icon size={20} />
                   </span>
-                  <h3 className="mt-4 font-heading text-base font-semibold text-navy">{card.title}</h3>
+                  <h3 className="mt-4 font-heading text-base font-semibold text-ink">{card.title}</h3>
                   {card.lines.map((line) => (
                     <p key={line} className="mt-1.5 text-sm leading-relaxed text-muted">
                       {line}
@@ -220,8 +220,8 @@ export default function ContactPage() {
 
             <div className="relative flex-1 overflow-hidden rounded-3xl border border-line">
               <iframe
-                title="Brancho Corporate Office — Bodakdev, Ahmedabad"
-                src="https://maps.google.com/maps?q=Bodakdev%2C%20Ahmedabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                title="Brancho Office — Somnath Road, Veraval"
+                src="https://maps.google.com/maps?q=Veraval%2C%20Gujarat&t=&z=14&ie=UTF8&iwloc=&output=embed"
                 className="h-80 w-full grayscale-[35%] transition-all duration-500 hover:grayscale-0 lg:h-full lg:min-h-[320px]"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -229,7 +229,7 @@ export default function ContactPage() {
               />
               <div className="pointer-events-none absolute bottom-4 left-4 flex items-center gap-2 rounded-full bg-navy/85 px-4 py-2 text-xs font-semibold text-white backdrop-blur">
                 <MapPin size={13} className="text-gold" />
-                Ahmedabad · Gujarat
+                Veraval · Gujarat
               </div>
             </div>
           </motion.div>
@@ -239,13 +239,13 @@ export default function ContactPage() {
       {/* Mini FAQ */}
       <section id="faq" className="border-t border-line bg-surface-soft py-24">
         <div className="container-wide max-w-3xl">
-          <h2 className="mb-12 text-center font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+          <h2 className="mb-12 text-center font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
             Quick answers
           </h2>
           <div className="space-y-4">
             {FAQS.slice(0, 4).map((faq) => (
               <div key={faq.question} className="rounded-2xl border border-line bg-surface p-7">
-                <h3 className="font-heading text-base font-semibold text-navy">{faq.question}</h3>
+                <h3 className="font-heading text-base font-semibold text-ink">{faq.question}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">{faq.answer}</p>
               </div>
             ))}

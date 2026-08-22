@@ -20,7 +20,7 @@ export default function Cities() {
               align="left"
               eyebrow="Where We Are"
               title="Serving homes across India"
-              description="Headquartered in Ahmedabad, Brancho now serves 25+ cities — with every new city opened to the same standards of verification, quality and trust."
+              description="Headquartered in Junagadh, Brancho today serves Veraval, Rajkot and Junagadh — with every new city opened to the same standards of verification, quality and trust."
               className="mb-10"
             />
 

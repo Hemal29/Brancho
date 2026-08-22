@@ -82,7 +82,9 @@ export function AppShell({
   useEffect(() => {
     const stored = localStorage.getItem("theme");
     const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setDark(stored ? stored === "dark" : prefers);
+    const next = stored ? stored === "dark" : prefers;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
   }, []);
 
   const toggleDark = () => {
@@ -97,9 +99,9 @@ export function AppShell({
   useEffect(() => {
     if (!loading) {
       if (!user) {
-        router.replace("/login?redirect=" + role);
-      } else if (user.role !== role) {
-        router.replace(user.role === "admin" ? "/admin" : user.role === "provider" ? "/provider" : "/customer");
+        router.replace("/admin/login");
+      } else if (user.role !== "admin") {
+        window.location.href = `${process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"}/login`;
       }
     }
   }, [loading, user, role, router]);
@@ -130,7 +132,7 @@ export function AppShell({
         <div className="dot-grid-light absolute inset-0 opacity-20" />
         <div className="relative flex h-16 items-center justify-between border-b border-white/10 px-5">
           <Link href={role === "admin" ? "/admin" : role === "provider" ? "/provider" : "/customer"} className="flex items-center gap-2.5">
-            <img src="/brancho-logo-white.png" alt="" className="h-8 w-8 object-contain" />
+            <img src="/brancho-logo.png" alt="" className="h-8 w-8 rounded-lg bg-white object-contain p-0.5 shadow-sm" />
             <span className="font-heading text-lg font-bold tracking-tight">Brancho</span>
           </Link>
           <button className="text-white/60 lg:hidden" onClick={() => setMobileOpen(false)} aria-label="Close menu">
@@ -170,7 +172,7 @@ export function AppShell({
             <button
               onClick={async () => {
                 await logout();
-                router.replace("/login?redirect=" + role);
+                router.replace("/admin/login");
               }}
               className="text-white/50 transition-colors hover:text-white"
               aria-label="Logout"

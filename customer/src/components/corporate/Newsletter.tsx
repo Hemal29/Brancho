@@ -41,13 +41,13 @@ export default function Newsletter({ dark = false }: { dark?: boolean }) {
         <div>
           <span
             className={`mb-5 inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] ${
-              dark ? "border-white/15 bg-white/5 text-gold" : "border-navy/10 bg-surface text-accent-deep"
+              dark ? "border-white/15 bg-white/5 text-gold" : "border-line bg-surface text-accent-deep"
             }`}
           >
             <Mail size={13} />
             The Brancho Bulletin
           </span>
-          <h2 className={`text-balance text-3xl font-semibold leading-tight sm:text-4xl ${dark ? "text-white" : "text-navy"}`}>
+          <h2 className={`text-balance text-3xl font-semibold leading-tight sm:text-4xl ${dark ? "text-white" : "text-ink"}`}>
             Care tips, offers and company news — once a month, never spam.
           </h2>
           <p className={`mt-4 text-sm leading-relaxed ${dark ? "text-white/60" : "text-muted"}`}>
@@ -92,7 +92,7 @@ export default function Newsletter({ dark = false }: { dark?: boolean }) {
                   type="submit"
                   disabled={isSubmitting}
                   className={`inline-flex shrink-0 items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold transition-all disabled:opacity-60 ${
-                    dark ? "bg-gold text-navy hover:brightness-110" : "bg-navy text-white hover:bg-navy-soft"
+                    dark ? "bg-gold text-navy hover:brightness-110" : "bg-navy text-white hover:bg-navy-soft dark:bg-gold dark:text-navy"
                   }`}
                 >
                   {isSubmitting ? "Signing up…" : (

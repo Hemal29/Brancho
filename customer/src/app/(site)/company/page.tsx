@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Brancho — India's Trusted Home Services Platform",
     description:
-      "From an Ahmedabad garage to 100,000+ homes served. Meet the team behind Brancho.",
+      "From a Junagadh garage to thousands of homes served. Meet the team behind Brancho.",
     url: "https://brancho.in/company",
   },
 };

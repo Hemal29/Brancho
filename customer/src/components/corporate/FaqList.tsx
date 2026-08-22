@@ -38,7 +38,7 @@ export default function FaqList({
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left"
             >
-              <span className={cn("font-heading text-base font-semibold", dark ? "text-white" : "text-navy")}>
+              <span className={cn("font-heading text-base font-semibold", dark ? "text-white" : "text-ink")}>
                 {item.q}
               </span>
               <span

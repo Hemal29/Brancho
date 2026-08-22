@@ -33,7 +33,7 @@ export default function BusinessDetailPage({ business }: { business: Business })
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 rounded-full border border-navy/10 bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-all hover:border-accent"
+            className="inline-flex items-center gap-2 rounded-full border border-line bg-surface px-7 py-3.5 text-sm font-semibold text-ink transition-all hover:border-accent"
           >
             Talk to our team
           </Link>
@@ -98,7 +98,7 @@ export default function BusinessDetailPage({ business }: { business: Business })
                 <span className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/10 text-accent-deep">
                   <Check size={18} />
                 </span>
-                <h3 className="mt-5 font-heading text-lg font-semibold text-navy">{s.title}</h3>
+                <h3 className="mt-5 font-heading text-lg font-semibold text-ink">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{s.description}</p>
               </motion.div>
             ))}

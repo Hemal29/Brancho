@@ -45,7 +45,7 @@ export default function MediaVideosPage() {
                   <Clock size={12} />
                   {v.duration}
                 </span>
-                <span className="absolute left-0 top-0 rounded-br-2xl rounded-tl-3xl bg-gold px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-navy">
+                <span className="absolute left-0 top-0 rounded-br-2xl rounded-tl-3xl bg-gold px-4 py-1.5 text-[10px] font-bold uppercase tracking-widest text-ink">
                   {v.category}
                 </span>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy via-navy/60 to-transparent p-6 pt-16">

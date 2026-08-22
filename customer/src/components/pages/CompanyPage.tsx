@@ -34,7 +34,7 @@ const PILLARS = [
     items: [
       "AI-based professional allocation in seconds",
       "Real-time operations dashboard for every city",
-      "Digital invoices and secure payments",
+      "Digital invoices and transparent pricing",
       "Quality monitoring on 100% of completed services",
     ],
   },
@@ -49,7 +49,7 @@ export default function CompanyPage() {
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Company", href: "/company" }]}
         eyebrow="About Brancho"
         title="Built in Gujarat. Built for every Indian home."
-        description="Brancho is an Indian technology platform transforming home services through trust, transparency and skilled professionals — from a single Ahmedabad garage to a national movement."
+        description="Brancho is an Indian technology platform transforming home services through trust, transparency and skilled professionals — from a single Junagadh garage to a growing movement."
       >
         <div className="flex flex-wrap gap-8">
           {[
@@ -59,7 +59,7 @@ export default function CompanyPage() {
             { value: 4.9, suffix: "★", label: "Avg. rating", decimal: true },
           ].map((s) => (
             <div key={s.label}>
-              <p className="font-heading text-3xl font-bold text-navy">
+              <p className="font-heading text-3xl font-bold text-ink">
                 {s.decimal ? (
                   "4.9★"
                 ) : (
@@ -105,7 +105,7 @@ export default function CompanyPage() {
               <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-accent">
                 <Eye size={24} />
               </span>
-              <h2 className="mt-6 font-heading text-2xl font-semibold text-navy">Our Vision</h2>
+              <h2 className="mt-6 font-heading text-2xl font-semibold text-ink">Our Vision</h2>
               <p className="mt-4 text-sm leading-relaxed text-muted">
                 A future where no family ever worries about who enters their home —
                 and where every skilled professional in India enjoys dignified,
@@ -207,7 +207,7 @@ export default function CompanyPage() {
                 className="relative rounded-3xl border border-line bg-surface-soft p-8"
               >
                 <span className="font-heading text-4xl font-bold text-gold">{item.year}</span>
-                <h3 className="mt-4 font-heading text-lg font-semibold text-navy">{item.title}</h3>
+                <h3 className="mt-4 font-heading text-lg font-semibold text-ink">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
               </motion.div>
             ))}
@@ -236,7 +236,7 @@ export default function CompanyPage() {
                 <span className="font-heading text-sm font-bold text-accent">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="mt-3 font-heading text-lg font-semibold text-navy">{value.title}</h3>
+                <h3 className="mt-3 font-heading text-lg font-semibold text-ink">{value.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted">{value.description}</p>
               </motion.div>
             ))}
@@ -272,7 +272,7 @@ export default function CompanyPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="font-heading text-lg font-semibold text-navy">{person.name}</h3>
+                  <h3 className="font-heading text-lg font-semibold text-ink">{person.name}</h3>
                   <p className="mt-0.5 text-xs font-semibold uppercase tracking-widest text-accent-deep">
                     {person.role}
                   </p>
@@ -308,7 +308,7 @@ export default function CompanyPage() {
                 >
                   <pillar.icon size={24} />
                 </span>
-                <h2 className={`mt-6 font-heading text-2xl font-semibold ${idx === 0 ? "text-white" : "text-navy"}`}>
+                <h2 className={`mt-6 font-heading text-2xl font-semibold ${idx === 0 ? "text-white" : "text-ink"}`}>
                   {pillar.title}
                 </h2>
                 <ul className="mt-6 space-y-3.5">
@@ -340,7 +340,7 @@ export default function CompanyPage() {
                 <HeartHandshake size={22} />
               </span>
               <div>
-                <h2 className="font-heading text-2xl font-semibold text-navy">Come build with us</h2>
+                <h2 className="font-heading text-2xl font-semibold text-ink">Come build with us</h2>
                 <p className="mt-2 text-sm text-muted">
                   We&apos;re hiring engineers, operators and changemakers across India.
                 </p>

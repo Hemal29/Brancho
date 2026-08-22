@@ -99,14 +99,14 @@ export default function SearchPage() {
             {!query.trim() && (
               <div className="py-16 text-center text-muted">
                 <FileSearch size={40} className="mx-auto mb-4 text-gold" />
-                <p className="font-heading text-lg font-semibold text-navy">Start typing to search</p>
+                <p className="font-heading text-lg font-semibold text-ink">Start typing to search</p>
                 <p className="mt-2 text-sm">{INDEX.length} indexed pages, articles and services.</p>
               </div>
             )}
 
             {query.trim() && results.length === 0 && (
               <div className="py-16 text-center">
-                <p className="font-heading text-xl font-semibold text-navy">No results for “{query}”</p>
+                <p className="font-heading text-xl font-semibold text-ink">No results for “{query}”</p>
                 <p className="mx-auto mt-3 max-w-md text-sm text-muted">
                   Try a different keyword, or browse from our
                   {" "}
@@ -134,7 +134,7 @@ export default function SearchPage() {
                         <span className="rounded-full bg-navy px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-widest text-gold">
                           {r.group}
                         </span>
-                        <h3 className="font-heading text-base font-semibold text-navy group-hover:text-accent-deep">
+                        <h3 className="font-heading text-base font-semibold text-ink group-hover:text-accent-deep">
                           {r.title}
                         </h3>
                       </div>

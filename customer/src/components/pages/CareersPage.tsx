@@ -33,7 +33,7 @@ export default function CareersPage() {
         <div className="flex flex-wrap gap-4">
           <a
             href="#openings"
-            className="inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-sm font-semibold text-navy shadow-xl shadow-navy/30 transition-all hover:bg-secondary"
+            className="inline-flex items-center gap-2 rounded-full bg-navy px-8 py-4 text-sm font-semibold text-white shadow-xl shadow-navy/30 transition-all hover:bg-navy-soft dark:bg-gold dark:text-navy dark:hover:brightness-110"
           >
             See Open Roles <ArrowRight size={16} />
           </a>
@@ -50,7 +50,7 @@ export default function CareersPage() {
       <section id="openings" className="bg-surface py-24 lg:py-32">
         <div className="container-wide">
           <div className="mb-12 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-            <h2 className="font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               Open positions
             </h2>
             <p className="text-sm text-muted">{JOBS.length} roles · Remote-friendly</p>
@@ -65,24 +65,24 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-40px" }}
                 transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: (i % 2) * 0.08 }}
-                className="group flex items-center justify-between gap-6 rounded-2xl border border-line bg-surface-soft p-7 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-white hover:shadow-2xl hover:shadow-navy/10"
+                className="group flex items-center justify-between gap-6 rounded-2xl border border-line bg-surface-soft p-7 transition-all duration-300 hover:-translate-y-1 hover:border-transparent hover:bg-surface hover:shadow-2xl hover:shadow-navy/10"
               >
                 <div>
                   <span className="text-[11px] font-bold uppercase tracking-widest text-accent-deep">
                     {job.team}
                   </span>
-                  <h3 className="mt-2 font-heading text-lg font-semibold text-navy">{job.title}</h3>
+                  <h3 className="mt-2 font-heading text-lg font-semibold text-ink">{job.title}</h3>
                   <p className="mt-2 max-w-md text-sm leading-relaxed text-muted">{job.description}</p>
                   <div className="mt-4 flex flex-wrap gap-3 text-xs font-medium text-muted">
                     <span className="inline-flex items-center gap-1.5">
                       <MapPin size={12} className="text-accent" /> {job.location}
                     </span>
-                    <span className="inline-flex items-center rounded-full bg-navy/5 px-3 py-1 font-semibold text-navy/70">
+                    <span className="inline-flex items-center rounded-full bg-accent/10 px-3 py-1 font-semibold text-muted">
                       {job.type}
                     </span>
                   </div>
                 </div>
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-navy transition-all group-hover:bg-accent group-hover:text-white">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-line text-ink transition-all group-hover:bg-accent group-hover:text-white">
                   <ArrowRight size={17} className="transition-transform group-hover:translate-x-0.5" />
                 </span>
               </motion.a>
@@ -113,7 +113,7 @@ export default function CareersPage() {
             </div>
             <a
               href="/contact"
-              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-all hover:bg-secondary"
+              className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-ink transition-all hover:bg-secondary"
             >
               Apply as Partner <ArrowRight size={15} />
             </a>
@@ -183,7 +183,7 @@ export default function CareersPage() {
             <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-navy text-gold">
               <Building2 size={22} />
             </span>
-            <h2 className="font-heading text-3xl font-semibold tracking-tight text-navy sm:text-4xl">
+            <h2 className="font-heading text-3xl font-semibold tracking-tight text-ink sm:text-4xl">
               How hiring works
             </h2>
           </div>
@@ -199,7 +199,7 @@ export default function CareersPage() {
                 className="relative rounded-2xl border border-line bg-surface-soft p-6"
               >
                 <span className="font-heading text-3xl font-bold text-gold">{step.step}</span>
-                <h3 className="mt-3 font-heading text-base font-semibold text-navy">{step.title}</h3>
+                <h3 className="mt-3 font-heading text-base font-semibold text-ink">{step.title}</h3>
                 <p className="mt-2 text-xs leading-relaxed text-muted">{step.description}</p>
               </motion.div>
             ))}

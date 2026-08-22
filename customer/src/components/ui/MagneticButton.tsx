@@ -19,9 +19,9 @@ const variants = {
   primary:
     "bg-navy text-white hover:bg-navy-soft shadow-lg shadow-navy/20 hover:shadow-xl hover:shadow-navy/25",
   secondary:
-    "bg-white text-ink border border-navy/10 hover:border-navy/25 shadow-sm",
+    "bg-surface text-ink border border-line hover:border-accent shadow-sm",
   ghost:
-    "bg-transparent text-ink border border-navy/20 hover:border-navy/40",
+    "bg-transparent text-ink border border-line hover:border-accent",
   light:
     "bg-white text-navy shadow-xl shadow-navy/30 hover:bg-secondary",
 };

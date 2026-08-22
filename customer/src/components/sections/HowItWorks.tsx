@@ -16,8 +16,8 @@ export default function HowItWorks() {
         <SectionHeading
           dark
           eyebrow="How It Works"
-          title="Five steps to a perfect home service"
-          description="From booking to payment, everything is designed to be simple, transparent and completely stress-free."
+          title="Four steps to a perfect home service"
+          description="From booking to completion, everything is designed to be simple, transparent and completely stress-free."
         />
 
         <div className="relative mx-auto max-w-4xl">

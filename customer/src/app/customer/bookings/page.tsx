@@ -15,7 +15,6 @@ type Booking = {
   scheduledAt: string;
   payableAmount: string;
   bookingStatus: string;
-  paymentStatus: string;
   addressLine: string;
   city: string;
 };

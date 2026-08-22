@@ -68,7 +68,7 @@ export default function Technology() {
             <div>
               <p className="font-heading font-semibold">Your data is protected</p>
               <p className="text-sm text-white/55">
-                256-bit encryption, PCI-DSS compliant payments, and strict privacy controls.
+                256-bit encryption and strict privacy controls.
               </p>
             </div>
           </div>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { CalendarCheck, Wallet, IndianRupee, Clock, ArrowRight, Sparkles, Loader2 } from "lucide-react";
+import { CalendarCheck, IndianRupee, Clock, ArrowRight, Sparkles, Loader2 } from "lucide-react";
 import { useAuth } from "@/lib/auth-context";
 import { api, formatINR, formatDateTime } from "@/lib/client";
 import { StatCard, Badge } from "@/components/app/StatCard";
@@ -23,23 +23,19 @@ type Booking = {
 
 export default function CustomerDashboard() {
   const { user } = useAuth();
-  const [stats, setStats] = useState<{ bookings: number; upcoming: number; spent: number; wallet: number } | null>(null);
+  const [stats, setStats] = useState<{ bookings: number; upcoming: number; spent: number } | null>(null);
   const [recent, setRecent] = useState<Booking[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     (async () => {
-      const [bookings, wallet] = await Promise.all([
-        api<{ bookings: Booking[] }>("/api/bookings"),
-        api<{ balance: number }>("/api/wallet"),
-      ]);
-      if (bookings.ok && wallet.ok) {
+      const bookings = await api<{ bookings: Booking[] }>("/api/bookings");
+      if (bookings.ok) {
         const list = bookings.data!.bookings;
         setStats({
           bookings: list.length,
           upcoming: list.filter((b) => ["pending", "confirmed", "assigned", "in_progress"].includes(b.bookingStatus)).length,
           spent: list.filter((b) => b.bookingStatus === "completed").reduce((s, b) => s + parseFloat(b.payableAmount), 0),
-          wallet: wallet.data!.balance,
         });
         setRecent(list.slice(0, 5));
       }
@@ -67,7 +63,7 @@ export default function CustomerDashboard() {
           <p className="text-sm text-white/60">Welcome back,</p>
           <h2 className="mt-1 font-heading text-2xl font-bold">{user?.name}</h2>
           <p className="mt-3 max-w-lg text-sm text-white/70">
-            Your home services, all in one place. Book a professional, track every visit and pay securely — right here.
+            Your home services, all in one place. Book a professional and track every visit — right here.
           </p>
           <Link
             href="/customer/book"
@@ -80,11 +76,10 @@ export default function CustomerDashboard() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div className="grid grid-cols-3 gap-4">
         <StatCard label="Total bookings" value={stats?.bookings ?? 0} icon={CalendarCheck} />
         <StatCard label="Upcoming visits" value={stats?.upcoming ?? 0} icon={Clock} accent />
         <StatCard label="Total spent" value={formatINR(stats?.spent)} icon={IndianRupee} />
-        <StatCard label="Wallet balance" value={formatINR(stats?.wallet)} icon={Wallet} accent />
       </div>
 
       <div className="card p-5">

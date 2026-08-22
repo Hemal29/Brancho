@@ -68,7 +68,7 @@ export default function FaqsPage() {
                         <c.icon size={19} />
                       </span>
                       <div>
-                        <h3 className="font-heading text-base font-semibold text-navy">{c.title}</h3>
+                        <h3 className="font-heading text-base font-semibold text-ink">{c.title}</h3>
                         <p className="mt-1 text-sm text-muted">{c.description}</p>
                         <Link
                           href={c.href}
@@ -83,7 +83,7 @@ export default function FaqsPage() {
               </div>
 
               <div className="mt-8 rounded-3xl border border-line bg-surface-soft p-6">
-                <h3 className="font-heading text-sm font-semibold text-navy">Legal & policies</h3>
+                <h3 className="font-heading text-sm font-semibold text-ink">Legal & policies</h3>
                 <ul className="mt-4 space-y-2.5">
                   {LEGAL_FAQ_LINKS.map((l) => (
                     <li key={l.href}>
