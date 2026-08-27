@@ -90,7 +90,7 @@ export default function FounderPage() {
         <div className="container-wide">
           <SectionHeading
             eyebrow="Principles"
-            title="How Rohan leads"
+            title="How Bhavy leads"
             className="mb-14"
           />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">

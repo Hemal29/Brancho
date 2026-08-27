@@ -27,7 +27,7 @@ const TIMELINE = [
     year: "2021",
     title: "Expansion",
     description:
-      "Steady growth across Gujarat. Verified professionals serving Veraval, Rajkot and Junagadh.",
+      "Steady growth across Gujarat. Verified professionals serving Veraval today, with more cities on the way.",
   },
   {
     icon: Cpu,

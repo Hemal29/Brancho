@@ -5,7 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Search, ArrowRight, FileSearch } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
-import { SEARCHABLE_PAGES, NEWSROOM, BUSINESSES } from "@/lib/corporate";
+import { SEARCHABLE_PAGES, NEWSROOM } from "@/lib/corporate";
 
 type Result = {
   title: string;
@@ -22,15 +22,6 @@ const INDEX: Result[] = [
     description: n.excerpt,
     group: "Newsroom",
   })),
-  ...BUSINESSES.flatMap((b) => [
-    { title: b.name, path: `/businesses/${b.slug}`, description: b.tagline, group: "Businesses" },
-    ...b.services.map((s) => ({
-      title: s.title,
-      path: `/businesses/${b.slug}`,
-      description: `${b.name} — ${s.description}`,
-      group: "Businesses",
-    })),
-  ]),
 ];
 
 export default function SearchPage() {
@@ -80,7 +71,7 @@ export default function SearchPage() {
                 onFocus={() => setFocused(true)}
                 onBlur={() => setFocused(false)}
                 type="search"
-                placeholder="Try “deep cleaning”, “refund”, “Urgent Care”…"
+                placeholder="Try “deep cleaning”, “refund”, “AC service”…"
                 className="w-full bg-transparent text-base text-ink outline-none placeholder:text-muted"
               />
               {query && (

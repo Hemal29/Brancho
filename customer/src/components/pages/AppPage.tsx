@@ -10,7 +10,9 @@ import { CUSTOMER_APP_FEATURES, PROVIDER_APP_FEATURES, APP_SCREENS } from "@/lib
 function AppStoreButton({ light = false }: { light?: boolean }) {
   return (
     <a
-      href="#download"
+      href="https://apps.apple.com/in/app/brancho/id6771083522"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`flex items-center gap-3 rounded-2xl px-6 py-3.5 transition-all hover:scale-[1.03] ${
         light
           ? "bg-navy text-white hover:bg-navy-soft"
@@ -31,7 +33,9 @@ function AppStoreButton({ light = false }: { light?: boolean }) {
 function GooglePlayButton({ light = false }: { light?: boolean }) {
   return (
     <a
-      href="#download"
+      href="https://play.google.com/store/apps/details?id=com.brancho.app&hl=en_IN"
+      target="_blank"
+      rel="noopener noreferrer"
       className={`flex items-center gap-3 rounded-2xl px-6 py-3.5 transition-all hover:scale-[1.03] ${
         light
           ? "bg-navy text-white hover:bg-navy-soft"

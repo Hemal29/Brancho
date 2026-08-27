@@ -113,7 +113,7 @@ export default function Hero() {
 
         <motion.div variants={item} className="mt-8 flex flex-wrap items-center gap-2.5">
           <span className="text-sm font-medium text-white/60">Select your city:</span>
-          {["Veraval", "Rajkot", "Junagadh"].map((city) => (
+          {["Veraval"].map((city) => (
             <Link
               key={city}
               href="/cities"
@@ -136,7 +136,7 @@ export default function Hero() {
             Book a Service
             <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
           </MagneticButton>
-          <MagneticButton href="/careers" variant="ghost" size="lg" className="border-white/25 text-white hover:border-white/60 hover:bg-white/10">
+          <MagneticButton href="https://joinbrancho.com/" target="_blank" rel="noopener noreferrer" variant="ghost" size="lg" className="border-white/25 text-white hover:border-white/60 hover:bg-white/10">
             <UserPlus size={18} />
             Become a Partner
           </MagneticButton>

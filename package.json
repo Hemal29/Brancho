@@ -10,6 +10,7 @@
     "build:backend": "npm run build --prefix backend",
     "build:customer": "npm run build --prefix customer",
     "build:admin": "npm run build --prefix admin",
+    "build": "npm run build:customer && npm run build:backend && npm run build:admin",
     "db:seed": "npm run db:seed --prefix backend"
   }
 }

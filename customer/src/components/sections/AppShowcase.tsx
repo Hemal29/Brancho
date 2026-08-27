@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Smartphone, UserRound, Wrench, CheckCircle2, Apple, Play } from "lucide-react";
+import { Smartphone, UserRound, Wrench, CheckCircle2 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
-import MagneticButton from "@/components/ui/MagneticButton";
 import PhoneMockup from "@/components/ui/PhoneMockup";
 import { CUSTOMER_APP_FEATURES, PROVIDER_APP_FEATURES } from "@/lib/data";
 
@@ -89,31 +88,6 @@ export default function AppShowcase() {
             </motion.div>
           ))}
         </div>
-
-        {/* download CTA band */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-12 flex flex-col items-center gap-5 rounded-[2rem] bg-navy px-8 py-10 text-center"
-        >
-          <p className="max-w-md font-heading text-xl font-semibold text-white sm:text-2xl">
-            One app for every home service.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <MagneticButton href="/app" variant="primary">
-              Download Customer App
-            </MagneticButton>
-            <MagneticButton href="/app" variant="secondary">
-              Download Partner App
-            </MagneticButton>
-          </div>
-          <div className="flex items-center gap-5 text-xs text-white/50">
-            <span className="flex items-center gap-1.5"><Apple size={14} /> App Store</span>
-            <span className="flex items-center gap-1.5"><Play size={14} /> Google Play</span>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

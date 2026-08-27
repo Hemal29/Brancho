@@ -68,14 +68,13 @@ export function requireRole(roles: AuthUser["role"][]) {
 export const authCookieName = TOKEN_COOKIE;
 export const roleCookieName = ROLE_COOKIE;
 
-export function toAuthCookie(user: AuthUser, maxAge = 7 * 24 * 60 * 60) {
+export function toAuthCookie(user: AuthUser) {
   const token = signToken({ id: user.id, role: user.role });
   const base = {
     httpOnly: true,
     secure: process.env.NODE_ENV === "production",
     sameSite: "lax" as const,
     path: "/",
-    maxAge,
   };
   return { token, base };
 }

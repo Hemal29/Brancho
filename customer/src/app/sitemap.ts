@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { BUSINESSES, NEWSROOM, FUTURE } from "@/lib/corporate";
+import { NEWSROOM, FUTURE } from "@/lib/corporate";
 import { SERVICES_DETAILED } from "@/lib/data";
 
 type Entry = { path: string; priority: number; changeFrequency: "weekly" | "monthly" };
@@ -22,7 +22,6 @@ const STATIC_PAGES: Entry[] = [
   { path: "/trust", priority: 0.7, changeFrequency: "monthly" },
   { path: "/search", priority: 0.4, changeFrequency: "monthly" },
   { path: "/sitemap", priority: 0.3, changeFrequency: "monthly" },
-  { path: "/businesses", priority: 0.8, changeFrequency: "weekly" },
   { path: "/brand-guidelines", priority: 0.5, changeFrequency: "monthly" },
   { path: "/downloads", priority: 0.5, changeFrequency: "monthly" },
   { path: "/media/gallery", priority: 0.5, changeFrequency: "weekly" },
@@ -56,15 +55,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
-    });
-  }
-
-  for (const b of BUSINESSES) {
-    entries.push({
-      url: `https://brancho.in/businesses/${b.slug}`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.7,
     });
   }
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/sections/CTABand";
-import { BUSINESSES, NEWSROOM, FUTURE, SEARCHABLE_PAGES } from "@/lib/corporate";
+import { NEWSROOM, FUTURE, SEARCHABLE_PAGES } from "@/lib/corporate";
 
 const GROUPS: Array<{ title: string; links: { label: string; href: string }[] }> = [
   {
@@ -29,10 +29,6 @@ const GROUPS: Array<{ title: string; links: { label: string; href: string }[] }>
       { label: "Download Center", href: "/downloads" },
       { label: "FAQs", href: "/faqs" },
     ],
-  },
-  {
-    title: "Businesses",
-    links: BUSINESSES.map((b) => ({ label: b.name, href: `/businesses/${b.slug}` })),
   },
   {
     title: "Media",
@@ -69,7 +65,7 @@ export default function SitemapPage() {
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Sitemap", href: "/sitemap" }]}
         eyebrow="Sitemap"
         title="Everything on one page."
-        description="A complete index of every page on brancho.in — company, businesses, media, legal and more."
+        description="A complete index of every page on brancho.in — company, media, legal and more."
       />
 
       <section className="bg-surface py-24 lg:py-32">
