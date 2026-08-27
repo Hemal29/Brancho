@@ -4,25 +4,16 @@ import { notFound } from "next/navigation";
 import { ArrowRight, CheckCircle2, Clock, ChevronLeft } from "lucide-react";
 import { SERVICES_DETAILED, type Service } from "@/lib/data";
 import { iconMap } from "@/lib/utils";
+import { getAppBookingUrl } from "@/lib/app-links";
 import PageHero from "@/components/ui/PageHero";
 import CTABand from "@/components/sections/CTABand";
-
-const SLUG_ALIASES: Record<string, string> = {
-  "electric-care": "electrician",
-  plumbing: "plumbing",
-  "washing-care": "washing-machine-repair",
-  "ac-care": "ac-cleaning",
-  "refrigerator-care": "refrigerator-repair",
-  "ro-care": "ro-service",
-};
 
 export function generateStaticParams() {
   return SERVICES_DETAILED.map((s) => ({ slug: s.slug }));
 }
 
 function resolveService(slug: string): Service | undefined {
-  const target = SLUG_ALIASES[slug] ?? slug;
-  return SERVICES_DETAILED.find((s) => s.slug === target);
+  return SERVICES_DETAILED.find((s) => s.slug === slug);
 }
 
 export async function generateMetadata({
@@ -110,10 +101,10 @@ export default async function ServiceDetailPage({
                   </p>
                 </div>
               </div>
-              <Link href="/customer/book" className="btn-gold mt-6 flex w-full items-center justify-center gap-2 py-3.5">
+              <Link href={getAppBookingUrl()} className="btn-gold mt-6 flex w-full items-center justify-center gap-2 py-3.5">
                 Book Now <ArrowRight size={16} />
               </Link>
-              <Link href="/customer/bookings" className="btn-outline mt-3 flex w-full items-center justify-center gap-2 py-3.5">
+              <Link href={getAppBookingUrl()} className="btn-outline mt-3 flex w-full items-center justify-center gap-2 py-3.5">
                 Explore Service
               </Link>
               <p className="mt-4 text-center text-xs text-muted">

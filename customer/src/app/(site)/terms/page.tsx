@@ -73,8 +73,8 @@ const SECTIONS = [
     id: "contact",
     title: "Contact & Governing Law",
     body: [
-      "These Terms are governed by the laws of India. Any disputes are subject to the exclusive jurisdiction of the courts of Junagadh, Gujarat.",
-      "For questions about these Terms, contact support@brancho.in or our registered office in Junagadh, Gujarat, India.",
+      "These Terms are governed by the laws of India. Any disputes are subject to the exclusive jurisdiction of the courts of Veraval, Gujarat.",
+      "For questions about these Terms, contact support@brancho.in or our registered office in Veraval, Gujarat, India.",
     ],
   },
 ];

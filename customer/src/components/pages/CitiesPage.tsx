@@ -13,14 +13,13 @@ export default function CitiesPage() {
       <PageHero
         breadcrumb={[{ label: "Home", href: "/" }, { label: "Cities", href: "/cities" }]}
         eyebrow="Cities"
-        title="Serving Veraval, Rajkot and Junagadh. Building toward all of India."
-        description="Brancho began in Junagadh and now operates across the Saurashtra region with a clear national roadmap. Every city opens to the same promise — verified professionals and guaranteed service."
+        title="Serving Veraval today. Building toward all of India."
+        description="Brancho is live in Veraval with a clear national roadmap. Every new city opens to the same promise — verified professionals and guaranteed service."
       >
         <div className="flex flex-wrap gap-6">
           {[
-            { v: "3", l: "Cities live today" },
-            { v: "Junagadh", l: "Headquarters" },
-            { v: "2021", l: "Latest city — Veraval" },
+            { v: "1", l: "City live today" },
+            { v: "2021", l: "Since — Veraval" },
             { v: "4.9★", l: "City-wide rating" },
           ].map((s) => (
             <div key={s.l}>
@@ -102,7 +101,7 @@ export default function CitiesPage() {
           <div>
             <h2 className="font-heading text-2xl font-semibold text-ink">Live now</h2>
             <p className="mt-2 text-sm text-muted">
-              Six anchor cities running at full capacity — with the same quality standards everywhere.
+              Veraval running at full capacity — with the same quality standards everywhere we launch.
             </p>
             <ul className="mt-8 grid gap-4 sm:grid-cols-2">
               {CITIES.map((city, i) => (

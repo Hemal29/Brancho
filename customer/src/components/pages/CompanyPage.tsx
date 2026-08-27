@@ -14,7 +14,7 @@ import {
 import PageHero from "@/components/ui/PageHero";
 import SectionHeading from "@/components/ui/SectionHeading";
 import CTABand from "@/components/sections/CTABand";
-import { LEADERSHIP, VALUES, COMPANY_TIMELINE } from "@/lib/data";
+import { LEADERSHIP, VALUES } from "@/lib/data";
 import AnimatedCounter from "@/components/ui/AnimatedCounter";
 
 const PILLARS = [
@@ -39,8 +39,6 @@ const PILLARS = [
     ],
   },
 ];
-
-const FOUNDER_VALUES = ["Trust first", "Fair pay", "Craft over speed", "India at its best"];
 
 export default function CompanyPage() {
   return (
@@ -116,102 +114,71 @@ export default function CompanyPage() {
         </div>
       </section>
 
-      {/* Founder story */}
+      {/* Founder profile */}
       <section className="relative overflow-hidden bg-navy py-24 text-white lg:py-32">
         <div className="dot-grid-light absolute inset-0 opacity-25" />
-        <div className="container-wide relative grid items-center gap-14 lg:grid-cols-2">
+        <div className="container-wide relative">
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
           >
             <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-gold">
-              The Founder&apos;s Story
+              The Founder
             </span>
-            <h2 className="mt-6 text-balance font-heading text-3xl font-semibold leading-tight sm:text-4xl">
-              &ldquo;One wrong plumber changed everything.&rdquo;
-            </h2>
-            <div className="mt-6 space-y-4 text-sm leading-relaxed text-white/65">
-              <p>
-                In 2019, Brancho&apos;s founder Rohan Trivedi called an unverified
-                local electrician for a routine fix. The professional never arrived
-                on time, quoted three different prices, and left the job half-done.
-                His 70-year-old grandmother waited alone all day.
-              </p>
-              <p>
-                Rohan — then an infrastructure engineer — realised the problem was
-                not a lack of skilled people, but a complete absence of trust,
-                verification and accountability in Indian home services.
-              </p>
-              <p>
-                So he started Brancho with one van, three professionals and a
-                promise: <span className="font-semibold text-gold">every professional verified. every price upfront. every job guaranteed.</span>{" "}
-                Seven years later, that promise serves a hundred thousand homes.
-              </p>
-            </div>
+            <h2 className="mt-6 text-balance font-heading text-3xl font-semibold sm:text-4xl">Bhavy Rajpopat</h2>
+            <p className="mt-3 text-sm font-semibold text-white/70">
+              Founder &amp; Developer of Brancho · Veraval, Gujarat
+            </p>
+            <p className="mt-5 max-w-3xl text-sm leading-relaxed text-white/65">
+              Bhavy Rajpopat is an Indian tech entrepreneur, software developer and founder based in Veraval,
+              Gujarat. He developed Brancho as an on-demand marketplace that lets users book verified, trusted
+              home services by selecting their preferred time slots — a targeted solution to simplify local
+              service hiring in his region.
+            </p>
 
-            <div className="mt-8 flex flex-wrap gap-2.5">
-              {FOUNDER_VALUES.map((v) => (
-                <span
-                  key={v}
-                  className="rounded-full border border-gold/30 bg-gold/10 px-4 py-1.5 text-xs font-semibold text-gold"
-                >
-                  {v}
-                </span>
-              ))}
+            <div className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <h3 className="font-heading text-base font-semibold text-gold">Professional Summary &amp; Venture</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/65">
+                  The Brancho App is an on-demand marketplace for booking verified, trusted home services directly
+                  by picking preferred time slots — a targeted solution to simplify local service hiring within
+                  his regional area. His work under the venture name BRANCHO IND. earned official registration as
+                  an ecosystem innovator under the Startup Gujarat initiative, a state government program that
+                  fosters local tech development.
+                </p>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+                <h3 className="font-heading text-base font-semibold text-gold">Education &amp; Academic Background</h3>
+                <ul className="mt-3 space-y-3 text-sm leading-relaxed text-white/65">
+                  <li>
+                    <span className="font-semibold text-white">Schooling:</span> Sunrise High School, Veraval.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-white">Professional credentials:</span> Training for ACCA
+                    (Association of Chartered Certified Accountants) — a dual capability in business finance
+                    alongside app architecture.
+                  </li>
+                  <li>
+                    <span className="font-semibold text-white">Higher education:</span> University studies at RK
+                    University, Rajkot, Gujarat.
+                  </li>
+                </ul>
+              </div>
+
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-6 md:col-span-2 lg:col-span-1">
+                <h3 className="font-heading text-base font-semibold text-gold">Digital Profiles &amp; Footprint</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/65">
+                  Bhavy maintains distinct career profiles across professional platforms including a LinkedIn
+                  (schooling/ACCA) and a secondary LinkedIn (RK University) listing that catalogue his development
+                  skills and collegiate timeline. He also connects with a small community of peers through personal
+                  handles like his Instagram profile.
+                </p>
+              </div>
             </div>
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-            className="relative"
-          >
-            <div className="relative mx-auto aspect-square w-full max-w-md overflow-hidden rounded-3xl border border-white/10">
-              <Image
-                src="/team/rohan.svg"
-                alt="Rohan Trivedi, Founder & CEO of Brancho"
-                width={400}
-                height={400}
-                className="h-full w-full object-cover"
-              />
-            </div>
-            <div className="glass absolute -bottom-5 left-1/2 w-[85%] -translate-x-1/2 rounded-2xl px-6 py-4 text-center">
-              <p className="font-heading text-sm font-semibold text-white">Rohan Trivedi</p>
-              <p className="text-xs text-white/60">Founder & CEO · Brancho</p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="bg-surface py-24 lg:py-32">
-        <div className="container-wide">
-          <SectionHeading
-            eyebrow="Our Journey"
-            title="From one garage to a national platform"
-            align="left"
-            className="mb-14"
-          />
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {COMPANY_TIMELINE.map((item, i) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
-                className="relative rounded-3xl border border-line bg-surface-soft p-8"
-              >
-                <span className="font-heading text-4xl font-bold text-gold">{item.year}</span>
-                <h3 className="mt-4 font-heading text-lg font-semibold text-ink">{item.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted">{item.description}</p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 

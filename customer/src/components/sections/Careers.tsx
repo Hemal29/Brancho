@@ -13,6 +13,8 @@ const CAREER_PATHS = [
       "Join India's most respected home services network. Steady work, fair earnings, weekly payouts and a uniform you'll be proud to wear.",
     points: ["Police-verified onboarding", "Free professional training", "Weekly transparent payouts"],
     cta: "Apply as Partner",
+    href: "https://joinbrancho.com/",
+    external: true,
   },
   {
     icon: Users,
@@ -22,6 +24,8 @@ const CAREER_PATHS = [
       "Engineers, designers, operations and growth talent building the future of Indian home services from Junagadh.",
     points: ["Fast-growing, high-impact roles", "Remote-friendly culture", "Learning and growth budgets"],
     cta: "Explore Openings",
+    href: "/careers",
+    external: false,
   },
   {
     icon: Building2,
@@ -31,6 +35,8 @@ const CAREER_PATHS = [
       "Lead category, city or technology verticals at scale. Senior roles for leaders who want to build responsibly.",
     points: ["Leadership opportunities", "Equity and long-term incentives", "Purpose-driven work"],
     cta: "View Corporate Roles",
+    href: "/careers",
+    external: false,
   },
 ];
 
@@ -94,7 +100,9 @@ export default function Careers() {
                 </ul>
 
                 <a
-                  href="/contact"
+                  href={path.href}
+                  target={path.external ? "_blank" : undefined}
+                  rel={path.external ? "noopener noreferrer" : undefined}
                   className={`group/link mt-8 inline-flex w-fit items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all ${
                     i === 0
                       ? "bg-white text-navy hover:gap-3"

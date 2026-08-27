@@ -168,8 +168,6 @@ export const TESTIMONIALS = [
 
 export const CITIES = [
   { name: "Veraval", status: "live", x: 22, y: 68 },
-  { name: "Rajkot", status: "live", x: 31, y: 55 },
-  { name: "Junagadh", status: "live", x: 26, y: 63 },
 ];
 
 export const NEWS = [
@@ -225,7 +223,7 @@ export const FAQS = [
   {
     question: "Which cities is Brancho available in?",
     answer:
-      "Brancho currently operates in Veraval, Rajkot and Junagadh. We're expanding step by step across Gujarat — check the app for your city.",
+      "Brancho currently operates in Veraval. We're expanding step by step across Gujarat — check the app for your city.",
   },
   {
     question: "Can I reschedule or cancel a booking?",
@@ -434,9 +432,9 @@ export const SERVICES_DETAILED: Service[] = [
 
 export const LEADERSHIP = [
   {
-    name: "Rohan Trivedi",
-    role: "Founder & CEO",
-    bio: "Former infrastructure engineer with a decade in Indian consumer technology. Founded Brancho to give every home the service it deserves.",
+    name: "Bhavy Rajpopat",
+    role: "Founder & Developer",
+    bio: "Tech entrepreneur and software developer from Veraval, Gujarat. Built Brancho to bring verified, on-demand home services to local communities.",
     image: "/team/rohan.svg",
   },
   {
@@ -545,6 +543,8 @@ export const HIRING_STEPS = [
 ];
 
 export const UPCOMING_CITIES = [
+  { name: "Rajkot", eta: "Coming soon" },
+  { name: "Junagadh", eta: "Coming soon" },
   { name: "Mumbai", eta: "Q1 2027" },
   { name: "Pune", eta: "Q1 2027" },
   { name: "Delhi NCR", eta: "Q2 2027" },

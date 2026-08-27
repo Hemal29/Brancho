@@ -20,7 +20,7 @@ export default function Cities() {
               align="left"
               eyebrow="Where We Are"
               title="Serving homes across India"
-              description="Headquartered in Junagadh, Brancho today serves Veraval, Rajkot and Junagadh — with every new city opened to the same standards of verification, quality and trust."
+              description="Brancho is live in Veraval today, with every new city opened to the same standards of verification, quality and trust."
               className="mb-10"
             />
 
@@ -129,7 +129,7 @@ export default function Cities() {
                 23.02° N · 72.57° E
               </div>
               <div className="absolute right-5 top-4 font-mono text-[10px] uppercase tracking-[0.25em] text-white/30">
-                Gujarat HQ
+                Veraval · Gujarat
               </div>
             </div>
           </motion.div>

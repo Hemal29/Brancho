@@ -5,8 +5,8 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Clock, Tag, Check, ArrowRight } from "lucide-react";
 import PageHero from "@/components/ui/PageHero";
-import MagneticButton from "@/components/ui/MagneticButton";
 import { SERVICES_DETAILED, FAQS } from "@/lib/data";
+import { getAppBookingUrl } from "@/lib/app-links";
 import { useState } from "react";
 
 function ServiceFAQ() {
@@ -131,7 +131,7 @@ export default function ServicesPage() {
                       <p className="font-heading text-lg font-bold text-ink">{service.price}</p>
                     </div>
                     <Link
-                      href="/contact"
+                      href={getAppBookingUrl()}
                       className="group/btn inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 text-sm font-semibold text-white transition-all hover:bg-accent"
                     >
                       Book Now
@@ -142,31 +142,6 @@ export default function ServicesPage() {
               </motion.article>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Custom request band */}
-      <section className="bg-surface py-20 lg:py-24">
-        <div className="container-wide">
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="mx-auto flex max-w-4xl flex-col items-center justify-between gap-6 rounded-3xl border border-line bg-surface-soft p-10 text-center sm:flex-row sm:text-left"
-          >
-            <div>
-              <h2 className="font-heading text-2xl font-semibold text-ink">
-                Need something custom?
-              </h2>
-              <p className="mt-2 text-sm text-muted">
-                From villa maintenance to corporate cleaning programs, we&apos;ll build a service plan around you.
-              </p>
-            </div>
-            <MagneticButton href="/contact" variant="primary" className="shrink-0">
-              Request a Quote
-            </MagneticButton>
-          </motion.div>
         </div>
       </section>
 

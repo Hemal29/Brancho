@@ -10,6 +10,8 @@ type MagneticButtonProps = {
   variant?: "primary" | "secondary" | "ghost" | "light";
   size?: "sm" | "md" | "lg";
   href?: string;
+  target?: string;
+  rel?: string;
   onClick?: () => void;
   type?: "button" | "submit";
   ariaLabel?: string;
@@ -38,6 +40,8 @@ export default function MagneticButton({
   variant = "primary",
   size = "md",
   href,
+  target,
+  rel,
   onClick,
   type = "button",
   ariaLabel,
@@ -85,6 +89,8 @@ export default function MagneticButton({
       <motion.a
         ref={ref as never}
         href={href}
+        target={target}
+        rel={rel}
         onMouseMove={handleMove}
         onMouseLeave={reset}
         whileTap={{ scale: 0.97 }}

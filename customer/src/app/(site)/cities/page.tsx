@@ -4,7 +4,7 @@ import CitiesPage from "@/components/pages/CitiesPage";
 export const metadata: Metadata = {
   title: "Cities — Brancho Home Services Across India",
   description:
-    "Brancho serves Veraval, Rajkot and Junagadh across Gujarat — with more cities launching soon.",
+    "Brancho serves Veraval today across Gujarat — with more cities launching soon.",
   alternates: { canonical: "/cities" },
   openGraph: {
     title: "Brancho Cities",

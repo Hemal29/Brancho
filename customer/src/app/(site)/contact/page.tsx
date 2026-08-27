@@ -5,7 +5,7 @@ import { jsonLd } from "@/lib/schema";
 export const metadata: Metadata = {
   title: "Contact Brancho — Book a Service or Partner With Us",
   description:
-    "Contact Brancho — India's trusted home services platform. Reach our Junagadh head office, customer support, or explore partnerships. We respond within hours.",
+    "Contact Brancho — India's trusted home services platform. Reach our Veraval office, customer support, or explore partnerships. We respond within hours.",
   alternates: { canonical: "/contact" },
   openGraph: {
     title: "Contact Brancho",

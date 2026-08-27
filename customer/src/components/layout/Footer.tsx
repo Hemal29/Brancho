@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import Newsletter from "@/components/corporate/Newsletter";
-import { CONTACT, BUSINESSES, LEGAL_FAQ_LINKS } from "@/lib/corporate";
+import { CONTACT, LEGAL_FAQ_LINKS } from "@/lib/corporate";
 
 const SocialLinkedIn = () => (
   <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -39,16 +39,6 @@ const footerColumns = [
       { label: "Careers", href: "/careers" },
       { label: "Newsroom", href: "/newsroom" },
       { label: "Brand Guidelines", href: "/brand-guidelines" },
-      { label: "Download Center", href: "/downloads" },
-      { label: "Sitemap", href: "/sitemap" },
-    ],
-  },
-  {
-    title: "Businesses",
-    links: [
-      ...BUSINESSES.map((b) => ({ label: b.name, href: `/businesses/${b.slug}` })),
-      { label: "View All Businesses", href: "/businesses" },
-      { label: "The Future", href: "/future" },
     ],
   },
   {
@@ -59,11 +49,18 @@ const footerColumns = [
       { label: "Brancho Professionals", href: "/professionals" },
       { label: "Technology", href: "/technology" },
       { label: "Trust & Safety", href: "/trust" },
-      { label: "Mobile App", href: "/app" },
       { label: "Cities", href: "/cities" },
       { label: "FAQs", href: "/faqs" },
+    ],
+  },
+  {
+    title: "Resources",
+    links: [
+      { label: "Mobile App", href: "/app" },
+      { label: "Download Center", href: "/downloads" },
       { label: "Media Gallery", href: "/media/gallery" },
       { label: "Press Resources", href: "/media/press" },
+      { label: "Sitemap", href: "/sitemap" },
     ],
   },
   {
@@ -102,9 +99,8 @@ export default function Footer() {
               <span className="font-heading text-2xl font-bold tracking-tight">Brancho</span>
             </Link>
             <p className="mt-6 max-w-sm text-sm leading-relaxed text-white/60">
-              India&apos;s trusted home services platform — a family of businesses caring for
-              every part of home, built on verification, transparency and respect for the
-              professionals who do the work.
+              India&apos;s trusted home services platform — built on verification,
+              transparency and respect for the professionals who do the work.
             </p>
 
             <ul className="mt-8 space-y-3 text-sm text-white/70">
@@ -169,10 +165,7 @@ export default function Footer() {
           <p className="text-xs text-white/50">
             © {new Date().getFullYear()} Brancho Technologies Pvt. Ltd. All rights reserved.
           </p>
-          <div className="flex flex-wrap items-center gap-4 text-xs text-white/50">
-            <span className="hidden sm:inline">·</span>
-            <span>Made with care in Junagadh, Gujarat, India.</span>
-          </div>
+          <p className="text-xs text-white/50">Made with care in Veraval, Gujarat, India.</p>
         </div>
       </div>
     </footer>

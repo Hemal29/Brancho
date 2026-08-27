@@ -11,7 +11,7 @@ import { REGISTRATIONS, LEGAL_FAQ_LINKS, CORPORATE, CONTACT } from "@/lib/corpor
 const COMPANY_DETAILS = [
   { label: "Legal Name", value: CORPORATE.legalName },
   { label: "Founded", value: String(CORPORATE.founded) },
-  { label: "Registered Office", value: CORPORATE.headquarters },
+  { label: "Registered Office", value: CORPORATE.registeredOffice },
   { label: "Customer Support", value: CONTACT.support.email },
 ];
 

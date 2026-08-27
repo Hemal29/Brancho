@@ -3,12 +3,12 @@ import FounderPage from "@/components/pages/FounderPage";
 import { FOUNDER } from "@/lib/corporate";
 
 export const metadata: Metadata = {
-  title: "Rohan Trivedi — Founder & CEO",
+  title: "Bhavy Rajpopat — Founder & Developer",
   description:
-    "Meet Rohan Trivedi, founder of Brancho. Read the story behind India's trusted home services platform — from one van in Junagadh to homes across Gujarat.",
+    "Meet Bhavy Rajpopat, founder and developer of Brancho. The story behind the on-demand home services platform built in Veraval, Gujarat.",
   alternates: { canonical: "/founder" },
   openGraph: {
-    title: "Rohan Trivedi — Founder & CEO of Brancho",
+    title: "Bhavy Rajpopat — Founder & Developer of Brancho",
     description: "The story behind India's trusted home services platform.",
     url: "https://brancho.in/founder",
   },
